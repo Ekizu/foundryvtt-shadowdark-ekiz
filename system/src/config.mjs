@@ -143,6 +143,7 @@ SHADOWDARK.OFFICIAL_SOURCES = {
 	"cursed-scroll-2": "SHADOWDARK.source.cursed-scroll-2",
 	"cursed-scroll-3": "SHADOWDARK.source.cursed-scroll-3",
 	"quickstart": "SHADOWDARK.source.quickstart",
+	"ekiz": "SHADOWDARK.source.ekiz",
 	"bard-and-ranger": "SHADOWDARK.source.bard-and-ranger",
 	"core-rules": "SHADOWDARK.source.core-rules",
 };

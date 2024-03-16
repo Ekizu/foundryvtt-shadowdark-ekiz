@@ -221,14 +221,7 @@
 				"stashed": false
 			},
 			"hindrance": {
-				"type": "",
-				"isPhysical": true,
-				"quantity": 1,
-				"slots": {
-					"free_carry": 0,
-					"per_slot": 1,
-					"slots_used": 1
-				}
+				"type": ""
 			}
 		},
 		"Ancestry": {

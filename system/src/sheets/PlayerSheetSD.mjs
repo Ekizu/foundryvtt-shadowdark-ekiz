@@ -836,6 +836,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					attacks.ranged.push(...weaponAttacks.ranged);
 				}
 			}
+			else if (i.type === "Wound") {
+				slotCount += 1;
+			}
 			else if (i.type === "Boon") {
 				if (boons[i.system.boonType]) {
 					boons[i.system.boonType].items.push(i);
