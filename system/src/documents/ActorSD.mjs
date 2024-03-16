@@ -1,7 +1,7 @@
 export default class ActorSD extends Actor {
 
 	_abilityModifier(abilityScore) {
-		if (abilityScore == 1) return -5;
+		if (abilityScore === 1) return -5;
 		if (abilityScore >= 2 && abilityScore <= 3) return -4;
 		if (abilityScore >= 4 && abilityScore <= 5) return -3;
 		if (abilityScore >= 6 && abilityScore <= 7) return -2;
@@ -11,7 +11,7 @@ export default class ActorSD extends Actor {
 		if (abilityScore >= 14 && abilityScore <= 15) return 2;
 		if (abilityScore >= 16 && abilityScore <= 17) return 3;
 		if (abilityScore >= 18 && abilityScore <= 19) return 4;
-		if (abilityScore == 20) return 5;
+		if (abilityScore === 20) return 5;
 	}
 
 	async _applyHpRollToMax(value) {
@@ -229,7 +229,8 @@ export default class ActorSD extends Actor {
 
 	abilityModifier(ability) {
 		if (this.type === "Player") {
-			return (this._abilityModifier(this.system.abilities[ability].base + this.system.abilities[ability].bonus) - this.woundsCount);
+			return (this._abilityModifier(this.system.abilities[ability].base
+				    + this.system.abilities[ability].bonus) - this.woundsCount);
 		}
 		else {
 			return this.system.abilities[ability].mod;
@@ -238,7 +239,8 @@ export default class ActorSD extends Actor {
 
 	abilityModifierWithoutWounds(ability) {
 		if (this.type === "Player") {
-			return (this._abilityModifier(this.system.abilities[ability].base + this.system.abilities[ability].bonus));
+			return (this._abilityModifier(this.system.abilities[ability].base
+				    + this.system.abilities[ability].bonus));
 		}
 		else {
 			return this.system.abilities[ability].mod;
