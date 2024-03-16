@@ -741,7 +741,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.treasure"),
 				items: [],
 			},
-			wounds: {
+			wound: {
 				label: game.i18n.localize("SHADOWDARK.inventory.section.wounds"),
 				items: [],
 			},
