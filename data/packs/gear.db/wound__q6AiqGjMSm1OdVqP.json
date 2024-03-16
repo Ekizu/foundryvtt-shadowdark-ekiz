@@ -1,0 +1,24 @@
+{
+	"_id": "q6AiqGjMSm1OdVqP",
+	"_key": "!items!q6AiqGjMSm1OdVqP",
+	"effects": [
+	],
+	"folder": "0ws7y8D3IktigkiB",
+	"img": "icons/skills/wounds/anatomy-organ-heart-red.webp",
+	"name": "Physical Wound",
+	"system": {
+		"type": "Physical",
+		"description": "<p>A major physical wound that hinder the body and the mind.</p>",
+		"isPhysical": true,
+		"quantity": 1,
+		"slots": {
+			"free_carry": 0,
+			"per_slot": 1,
+			"slots_used": 1
+		},
+		"source": {
+			"title": "ekiz"
+		}
+	},
+	"type": "Wound"
+}

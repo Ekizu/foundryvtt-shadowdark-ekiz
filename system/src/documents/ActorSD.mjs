@@ -1,7 +1,8 @@
 export default class ActorSD extends Actor {
 
 	_abilityModifier(abilityScore) {
-		if (abilityScore >= 1 && abilityScore <= 3) return -4;
+		if (abilityScore == 1) return -5;
+		if (abilityScore >= 2 && abilityScore <= 3) return -4;
 		if (abilityScore >= 4 && abilityScore <= 5) return -3;
 		if (abilityScore >= 6 && abilityScore <= 7) return -2;
 		if (abilityScore >= 8 && abilityScore <= 9) return -1;
@@ -9,9 +10,9 @@ export default class ActorSD extends Actor {
 		if (abilityScore >= 12 && abilityScore <= 13) return 1;
 		if (abilityScore >= 14 && abilityScore <= 15) return 2;
 		if (abilityScore >= 16 && abilityScore <= 17) return 3;
-		if (abilityScore >= 18) return 4;
+		if (abilityScore >= 18 && abilityScore <= 19) return 4;
+		if (abilityScore == 20) return 5;
 	}
-
 
 	async _applyHpRollToMax(value) {
 		const currentHpBase = this.system.attributes.hp.base;
@@ -19,7 +20,6 @@ export default class ActorSD extends Actor {
 			"system.attributes.hp.base": currentHpBase + value,
 		});
 	}
-
 
 	async _getItemFromUuid(uuid) {
 		if (uuid !== "") {
@@ -195,7 +195,6 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 
@@ -217,25 +216,34 @@ export default class ActorSD extends Actor {
 
 	_prepareNPCData() {}
 
-
 	_preparePlayerData() {
 		this._populatePlayerModifiers();
 	}
 
+	updateWounds() {
+		const wounds = this.items.filter(
+			item => item.type === "Wound"
+		);
+		this.woundsCount = wounds.length;
+	}
 
 	abilityModifier(ability) {
 		if (this.type === "Player") {
-
-			return this._abilityModifier(
-				this.system.abilities[ability].base
-					+ this.system.abilities[ability].bonus
-			);
+			return (this._abilityModifier(this.system.abilities[ability].base + this.system.abilities[ability].bonus) - this.woundsCount);
 		}
 		else {
 			return this.system.abilities[ability].mod;
 		}
 	}
 
+	abilityModifierWithoutWounds(ability) {
+		if (this.type === "Player") {
+			return (this._abilityModifier(this.system.abilities[ability].base + this.system.abilities[ability].bonus));
+		}
+		else {
+			return this.system.abilities[ability].mod;
+		}
+	}
 
 	async addAncestry(item) {
 		this.update({"system.ancestry": item.uuid});
@@ -311,7 +319,7 @@ export default class ActorSD extends Actor {
 			case "melee":
 				return this.abilityModifier("str");
 			case "ranged":
-				return this.abilityModifier("dex");
+				return this.abilityModifier("wis");
 			default:
 				throw new Error(`Unknown attack type ${attackType}`);
 		}
@@ -743,7 +751,7 @@ export default class ActorSD extends Actor {
 
 		const rollData = super.getRollData();
 
-		rollData.initiativeBonus = this.abilityModifier("dex");
+		rollData.initiativeBonus = this.abilityModifier("cha");
 
 		rollData.initiativeFormula = "1d20";
 		if (this.system.bonuses?.advantage?.includes("initiative")) {
@@ -867,7 +875,6 @@ export default class ActorSD extends Actor {
 		}
 	}
 
-
 	numGearSlots() {
 		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
@@ -890,23 +897,22 @@ export default class ActorSD extends Actor {
 		return gearSlots;
 	}
 
-
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
-
-		if (this.type === "Player") {
+		if (this.type === "Player")
+		{
+			this.updateWounds()
 			this._preparePlayerData();
-
 			if (canvas.ready && game.user.character === this) {
 				game.shadowdark.effectPanel.refresh();
 			}
 		}
-		else if (this.type === "NPC") {
+		else if (this.type === "NPC")
+		{
 			this._prepareNPCData();
 		}
 	}
-
 
 	/** @inheritDoc */
 	prepareDerivedData() {
@@ -914,7 +920,6 @@ export default class ActorSD extends Actor {
 			this.updateArmorClass();
 		}
 	}
-
 
 	async rollAbility(abilityId, options={}) {
 		const parts = ["1d20", "@abilityBonus"];
@@ -1010,8 +1015,15 @@ export default class ActorSD extends Actor {
 				data.damageParts.push("@meleeDamageBonus");
 			}
 			else {
-				data.abilityBonus = this.abilityModifier("dex");
-
+				if (await item.isFinesseWeapon()) {
+					data.abilityBonus = Math.max(
+						this.abilityModifier("wis"),
+						this.abilityModifier("dex")
+					);
+				}
+				else {
+					data.abilityBonus = this.abilityModifier("wis");
+				}
 				data.talentBonus = bonuses.rangedAttackBonus;
 				data.rangedDamageBonus = bonuses.rangedDamageBonus * damageMultiplier;
 				data.damageParts.push("@rangedDamageBonus");
@@ -1162,7 +1174,7 @@ export default class ActorSD extends Actor {
 
 
 	async updateArmorClass() {
-		const dexModifier = this.abilityModifier("dex");
+		const dexModifier = this.abilityModifierWithoutWounds("dex");
 
 		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;

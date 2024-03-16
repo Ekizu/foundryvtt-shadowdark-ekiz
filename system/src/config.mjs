@@ -82,6 +82,7 @@ SHADOWDARK.DEFAULTS = {
 		"Talent": "icons/sundries/books/book-worn-brown-grey.webp",
 		"Wand": "icons/weapons/wands/wand-gem-violet.webp",
 		"Weapon": "icons/weapons/swords/swords-short.webp",
+		"Wound": "icons/skills/wounds/anatomy-organ-heart-red.webp"
 	},
 };
 
