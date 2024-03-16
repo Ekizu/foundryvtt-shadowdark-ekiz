@@ -837,6 +837,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				}
 			}
 			else if (i.type === "Wound") {
+				inventory["wound"].items.push(i);
 				slotCount += 1;
 			}
 			else if (i.type === "Boon") {
