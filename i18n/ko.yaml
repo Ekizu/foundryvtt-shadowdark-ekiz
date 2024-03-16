@@ -305,6 +305,7 @@ SHADOWDARK.inventory.section.basic: 기본 장비
 SHADOWDARK.inventory.section.potions: 물약
 SHADOWDARK.inventory.section.scrolls: 두루마리
 SHADOWDARK.inventory.section.treasure: 보물
+SHADOWDARK.inventory.section.wounds: Wounds
 SHADOWDARK.inventory.section.wands: 마법봉
 SHADOWDARK.inventory.section.weapon: 무기
 SHADOWDARK.inventory.slots_max: 최대

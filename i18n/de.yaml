@@ -305,6 +305,7 @@ SHADOWDARK.inventory.section.basic: Grundausrüstung
 SHADOWDARK.inventory.section.potions: Potions
 SHADOWDARK.inventory.section.scrolls: Scrolls
 SHADOWDARK.inventory.section.treasure: Schätze
+SHADOWDARK.inventory.section.wounds: Wunden
 SHADOWDARK.inventory.section.wands: Wands
 SHADOWDARK.inventory.section.weapon: Waffen
 SHADOWDARK.inventory.slots_max: Max

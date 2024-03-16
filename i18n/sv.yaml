@@ -305,6 +305,7 @@ SHADOWDARK.inventory.section.basic: Grundläggande Utrustning
 SHADOWDARK.inventory.section.potions: Brygder
 SHADOWDARK.inventory.section.scrolls: Pergamentrullar
 SHADOWDARK.inventory.section.treasure: Skatter
+SHADOWDARK.inventory.section.wounds: Wounds
 SHADOWDARK.inventory.section.wands: Trollspön
 SHADOWDARK.inventory.section.weapon: Vapen
 SHADOWDARK.inventory.slots_max: Max

@@ -305,6 +305,7 @@ SHADOWDARK.inventory.section.basic: Équipement de Base
 SHADOWDARK.inventory.section.potions: Potions
 SHADOWDARK.inventory.section.scrolls: Parchemins
 SHADOWDARK.inventory.section.treasure: Trésor
+SHADOWDARK.inventory.section.wounds: Blessures
 SHADOWDARK.inventory.section.wands: Baguettes
 SHADOWDARK.inventory.section.weapon: Armes
 SHADOWDARK.inventory.slots_max: Max

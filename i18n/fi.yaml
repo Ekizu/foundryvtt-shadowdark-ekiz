@@ -305,6 +305,7 @@ SHADOWDARK.inventory.section.basic: Yleiset varusteet/tarvikkeet
 SHADOWDARK.inventory.section.potions: Rohdot/Taikajuomat
 SHADOWDARK.inventory.section.scrolls: Loitsukääröt
 SHADOWDARK.inventory.section.treasure: Aarre
+SHADOWDARK.inventory.section.wounds: Wounds
 SHADOWDARK.inventory.section.wands: Taikasauvat
 SHADOWDARK.inventory.section.weapon: Aseet
 SHADOWDARK.inventory.slots_max: Maksimi

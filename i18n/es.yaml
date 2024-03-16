@@ -305,6 +305,7 @@ SHADOWDARK.inventory.section.basic: Equipo básico
 SHADOWDARK.inventory.section.potions: Pociones
 SHADOWDARK.inventory.section.scrolls: Pergaminos
 SHADOWDARK.inventory.section.treasure: Tesoro
+SHADOWDARK.inventory.section.wounds: Heridas
 SHADOWDARK.inventory.section.wands: Varitas
 SHADOWDARK.inventory.section.weapon: Armas
 SHADOWDARK.inventory.slots_max: Máx
