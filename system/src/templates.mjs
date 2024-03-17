@@ -17,6 +17,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/class.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/hp.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/initiative.hbs",
+		"systems/shadowdark/templates/actors/player/abilities/rest.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/luck.hbs",
 		"systems/shadowdark/templates/actors/player/background.hbs",
 		"systems/shadowdark/templates/actors/player/background/boons.hbs",
