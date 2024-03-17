@@ -142,6 +142,12 @@
 		grid-column: span 2;
 		row-gap: 4px;
 	}
+	.pc-rest {
+		@include p-reset;
+		display: grid;
+		grid-column: span 2;
+		row-gap: 4px;
+	}
 
 	.ac {
 		text-align: center;

@@ -635,6 +635,7 @@ SHADOWDARK.sheet.player.melee_attacks: Närstridsattacker
 SHADOWDARK.sheet.player.name.label: Namn
 SHADOWDARK.sheet.player.ranged_attacks: Avståndsattacker
 SHADOWDARK.sheet.player.roll_initiative: Rulla initiativ
+SHADOWDARK.sheet.player.rest: Rest
 SHADOWDARK.sheet.player.spells_tier: Grad
 SHADOWDARK.sheet.player.spells: Besvärjelser
 SHADOWDARK.sheet.player.tab.abilities: Förmågor
