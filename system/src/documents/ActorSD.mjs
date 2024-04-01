@@ -729,6 +729,24 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async getLimitedUsesItems() {
+		const items = this.items.filter(
+			item => item.isLimitedUses()
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return items;
+	}
+
 	async getAncestry() {
 		const uuid = this.system.ancestry ?? "";
 		return await this._getItemFromUuid(uuid);

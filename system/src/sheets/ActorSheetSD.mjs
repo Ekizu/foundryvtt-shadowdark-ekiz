@@ -292,12 +292,22 @@ export default class ActorSheetSD extends ActorSheet {
 
 	async _onRest(event) {
 		this.actor.resetToFullHP();
-		const items = await this.actor.getResetableItems();
-		for (const item of items) {
+		const resetableItems = await this.actor.getResetableItems();
+		for (const item of resetableItems) {
 			this.actor.updateEmbeddedDocuments(
 				"Item", [{
 					"_id": item.id,
 					"system.lost": false,
+				}]
+			);
+		}
+		const limitedUsesItems = await this.actor.getLimitedUsesItems();
+		for (const item of limitedUsesItems) {
+			const maxUses = item.system.uses.max;
+			this.actor.updateEmbeddedDocuments(
+				"Item", [{
+					"_id": item.id,
+					"system.uses.available": maxUses,
 				}]
 			);
 		}
