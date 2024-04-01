@@ -291,7 +291,16 @@ export default class ActorSheetSD extends ActorSheet {
 	}
 
 	async _onRest(event) {
-		console.log("_onRest()");
+		this.actor.resetToFullHP();
+		const items = await this.actor.getResetableItems();
+		for (const item of items) {
+			this.actor.updateEmbeddedDocuments(
+				"Item", [{
+					"_id": item.id,
+					"system.lost": false,
+				}]
+			);
+		}
 	}
 
 	async _onRollAbilityCheck(event) {

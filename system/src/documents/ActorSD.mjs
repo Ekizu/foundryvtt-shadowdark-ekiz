@@ -160,6 +160,12 @@ export default class ActorSD extends Actor {
 		});
 	}
 
+	async _resetToFullHP(options={}) {
+		const maxHp = this.system.attributes.hp.max;
+		this.update({
+			"system.attributes.hp.value": maxHp,
+		});
+	}
 
 	async _playerRollHP(options={}) {
 		const characterClass = await this.getClass();
@@ -705,6 +711,23 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async getResetableItems() {
+		const items = this.items.filter(
+			item => item.isResetable()
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return items;
+	}
 
 	async getAncestry() {
 		const uuid = this.system.ancestry ?? "";
@@ -1078,6 +1101,11 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	async resetToFullHP(options={}) {
+		if (this.type === "Player") {
+			this._resetToFullHP(options);
+		}
+	}
 
 	async sellAllGems() {
 		const items = this.items.filter(item => item.type === "Gem");
