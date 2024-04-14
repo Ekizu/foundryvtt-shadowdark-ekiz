@@ -295,10 +295,10 @@ export default class ActorSheetSD extends ActorSheet {
 		const wounds = await this.actor.getWounds();
 		if (wounds.length > 0)
 		{
-			const wound = wounds[0];
+			const woundItemId = wounds[0].data("item-id");
 			await this.actor.deleteEmbeddedDocuments(
 				"Item",
-				[wound]
+				[woundItemId]
 			);
 		}
 		const resetableItems = await this.actor.getResetableItems();
