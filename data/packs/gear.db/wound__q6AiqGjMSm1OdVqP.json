@@ -5,10 +5,10 @@
 	],
 	"folder": "0ws7y8D3IktigkiB",
 	"img": "icons/skills/wounds/anatomy-organ-heart-red.webp",
-	"name": "Physical Wound",
+	"name": "Basic Wound",
 	"system": {
-		"type": "Physical",
-		"description": "<p>A major physical wound that hinder the body and the mind.</p>",
+		"type": "Basic",
+		"description": "<p>A wound that hinder the body and the mind.</p>",
 		"source": {
 			"title": "ekiz"
 		}

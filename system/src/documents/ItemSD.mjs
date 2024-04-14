@@ -265,6 +265,10 @@ export default class ItemSD extends Item {
 		return this.type === "Weapon";
 	}
 
+	isWound() {
+		return this.type === "Wound";
+	}
+
 	isFinesseWeapon() {
 		return this.hasProperty("finesse");
 	}

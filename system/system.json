@@ -2,7 +2,7 @@
 	"id": "shadowdark",
 	"title": "Ekiz's Shadowdark RPG",
 	"desciption": "A system for playing the Shadowdark RPG from Arcane Library",
-	"version": "1.8.0-15",
+	"version": "1.8.0-16",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11"

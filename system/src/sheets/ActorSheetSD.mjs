@@ -292,6 +292,15 @@ export default class ActorSheetSD extends ActorSheet {
 
 	async _onRest(event) {
 		this.actor.resetToFullHP();
+		const wounds = await this.actor.getWounds();
+		if (wounds.length > 0)
+		{
+			const wound = wounds[0];
+			await this.actor.deleteEmbeddedDocuments(
+				"Item",
+				[wound]
+			);
+		}
 		const resetableItems = await this.actor.getResetableItems();
 		for (const item of resetableItems) {
 			this.actor.updateEmbeddedDocuments(

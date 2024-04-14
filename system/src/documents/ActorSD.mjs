@@ -711,6 +711,24 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async getWounds() {
+		const items = this.items.filter(
+			item => item.isWound()
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return items;
+	}
+
 	async getResetableItems() {
 		const items = this.items.filter(
 			item => item.isResetable()
