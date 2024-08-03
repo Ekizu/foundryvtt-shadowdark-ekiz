@@ -335,6 +335,11 @@ SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutos restantes"
 SHADOWDARK.inventory.item.light_seconds_remaining: Menos de 1 minuto restante
 SHADOWDARK.inventory.item.light_used: (used)
+
+SHADOWDARK.inventory.label.wounds: Wounds
+SHADOWDARK.item.wound_malus: Abilities Malus
+SHADOWDARK.item.wound_slots_used: Slots Used
+
 SHADOWDARK.inventory.label.quantity: Cant.
 SHADOWDARK.inventory.label.slots: Huecos
 SHADOWDARK.inventory.section.armor: Armadura
@@ -712,6 +717,9 @@ SHADOWDARK.source.cursed-scroll-1: Pergamino Maldito Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Pergamino Maldito Vol.2, Arenas Rojas
 SHADOWDARK.source.cursed-scroll-3: Pergamino Maldito Vol.3, Sol Medianoche
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
+
+SHADOWDARK.source.ekiz: "Shadowdark RPG: EKIZ"
+
 SHADOWDARK.spell_caster.priest: Clérigo
 SHADOWDARK.spell_caster.wizard: Mago
 SHADOWDARK.spell_duration.days: Días

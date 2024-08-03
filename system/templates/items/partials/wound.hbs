@@ -1,0 +1,22 @@
+<div class="SD-box">
+	<div class="header light">
+		<label>{{localize 'SHADOWDARK.inventory.label.wounds'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<div class="item-grid right">
+			<h3>{{localize 'SHADOWDARK.item.wound_malus'}}</h3>
+			{{numberInput
+				item.system.abilitiesMalus
+				name="system.abilitiesMalus"
+				placeholder="1"
+			}}
+			<h3>{{localize 'SHADOWDARK.item.wound_slots_used'}}</h3>
+			{{numberInput
+				item.system.slotsUsed
+				name="system.slotsUsed"
+				placeholder="1"
+			}}
+		</div>
+	</div>
+</div>

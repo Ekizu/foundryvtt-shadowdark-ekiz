@@ -83,6 +83,7 @@ SHADOWDARK.DEFAULTS = {
 		"Talent": "icons/sundries/books/book-worn-brown-grey.webp",
 		"Wand": "icons/weapons/wands/wand-gem-violet.webp",
 		"Weapon": "icons/weapons/swords/swords-short.webp",
+		"Wound": "icons/skills/wounds/anatomy-organ-heart-red.webp"
 	},
 };
 
@@ -143,6 +144,7 @@ SHADOWDARK.OFFICIAL_SOURCES = {
 	"cursed-scroll-2": "SHADOWDARK.source.cursed-scroll-2",
 	"cursed-scroll-3": "SHADOWDARK.source.cursed-scroll-3",
 	"quickstart": "SHADOWDARK.source.quickstart",
+	"ekiz": "SHADOWDARK.source.ekiz",
 	"bard-and-ranger": "SHADOWDARK.source.bard-and-ranger",
 	"core-rules": "SHADOWDARK.source.core-rules",
 };

@@ -1,7 +1,8 @@
 export default class ActorSD extends Actor {
 
 	_abilityModifier(abilityScore) {
-		if (abilityScore >= 1 && abilityScore <= 3) return -4;
+		if (abilityScore === 1) return -5;
+		if (abilityScore >= 2 && abilityScore <= 3) return -4;
 		if (abilityScore >= 4 && abilityScore <= 5) return -3;
 		if (abilityScore >= 6 && abilityScore <= 7) return -2;
 		if (abilityScore >= 8 && abilityScore <= 9) return -1;
@@ -9,7 +10,8 @@ export default class ActorSD extends Actor {
 		if (abilityScore >= 12 && abilityScore <= 13) return 1;
 		if (abilityScore >= 14 && abilityScore <= 15) return 2;
 		if (abilityScore >= 16 && abilityScore <= 17) return 3;
-		if (abilityScore >= 18) return 4;
+		if (abilityScore >= 18 && abilityScore <= 19) return 4;
+		if (abilityScore === 20) return 5;
 	}
 
 
@@ -224,20 +226,37 @@ export default class ActorSD extends Actor {
 		this._populatePlayerModifiers();
 	}
 
+	updateWounds() {
+		const wounds = this.items.filter(
+			item => item.type === "Wound"
+		);
+		this.woundMalus = 0;
+		for (const wound of wounds) {
+			this.woundMalus += wound.system.abilitiesMalus;
+		}
+	}
 
 	abilityModifier(ability) {
 		if (this.type === "Player") {
 
-			return this._abilityModifier(
+			return (this._abilityModifier(
 				this.system.abilities[ability].base
-					+ this.system.abilities[ability].bonus
-			);
+					+ this.system.abilities[ability].bonus) - this.woundMalus);
 		}
 		else {
 			return this.system.abilities[ability].mod;
 		}
 	}
 
+	abilityModifierWithoutWounds(ability) {
+		if (this.type === "Player") {
+			return (this._abilityModifier(this.system.abilities[ability].base
+				    + this.system.abilities[ability].bonus));
+		}
+		else {
+			return this.system.abilities[ability].mod;
+		}
+	}
 
 	async addAncestry(item) {
 		this.update({"system.ancestry": item.uuid});
@@ -704,6 +723,23 @@ export default class ActorSD extends Actor {
 		return items;
 	}
 
+	async getWounds() {
+		const items = this.items.filter(
+			item => item.isWound()
+		).sort((a, b) => {
+			const a_name = a.name.toLowerCase();
+			const b_name = b.name.toLowerCase();
+			if (a_name < b_name) {
+				return -1;
+			}
+			if (a_name > b_name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		return items;
+	}
 
 	async getAncestry() {
 		const uuid = this.system.ancestry ?? "";
@@ -712,7 +748,7 @@ export default class ActorSD extends Actor {
 
 
 	async getArmorClass() {
-		const dexModifier = this.abilityModifier("dex");
+		const dexModifier = this.abilityModifierWithoutWounds("dex");
 
 		let baseArmorClass = shadowdark.defaults.BASE_ARMOR_CLASS;
 		baseArmorClass += dexModifier;
@@ -997,7 +1033,7 @@ export default class ActorSD extends Actor {
 			gearSlots = strength > gearSlots ? strength : gearSlots;
 
 			// Hauler's get to add their Con modifer (if positive)
-			const conModifier = this.abilityModifier("con");
+			const conModifier = this.abilityModifierWithoutWounds("con");
 			gearSlots += this.system.bonuses.hauler && conModifier > 0
 				? conModifier
 				: 0;
@@ -1015,6 +1051,7 @@ export default class ActorSD extends Actor {
 		super.prepareData();
 
 		if (this.type === "Player") {
+			this.updateWounds()
 			this._preparePlayerData();
 
 			if (canvas.ready && game.user.character === this) {

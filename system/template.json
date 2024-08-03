@@ -163,7 +163,8 @@
 			"Spell",
 			"Talent",
 			"Wand",
-			"Weapon"
+			"Weapon",
+			"Wound"
 		],
 		"templates": {
 			"common": {
@@ -218,6 +219,11 @@
 					"slots_used": 1
 				},
 				"stashed": false
+			},
+			"hindrance": {
+				"type": "",
+				"abilitiesMalus": 1,
+				"slotsUsed": 1
 			}
 		},
 		"Ancestry": {
@@ -451,6 +457,12 @@
 			"range": "close",
 			"type": "melee",
 			"weaponMastery": false
+		},
+		"Wound": {
+			"templates": [
+				"common",
+				"hindrance"
+			]
 		}
 	}
 }

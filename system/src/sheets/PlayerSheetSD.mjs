@@ -779,6 +779,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			stashed: [],
 			treasure: [],
 			carried: [],
+			wounds: [],
 		};
 
 		const spellitems = {
@@ -825,6 +826,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			treasure: 0,
 			coins: 0,
 			gems: 0,
+			wounds: 0,
 		};
 
 		const freeCarrySeen = {};
@@ -846,9 +848,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					freeCarrySeen[i.name] = freeCarry;
 				}
 
-				const perSlot = i.system.slots.per_slot;
-				const quantity = i.system.quantity;
-				const slotsUsed = i.system.slots.slots_used;
+				const perSlot = i.system.slots.per_slot; // combien d'items dans une stack (1 slot)
+				const quantity = i.system.quantity; // combien d'items
+				const slotsUsed = i.system.slots.slots_used; // slots utilisé par unité
 
 				let totalSlotsUsed = Math.ceil(quantity / perSlot) * slotsUsed;
 				totalSlotsUsed -= freeCarry * slotsUsed;
@@ -927,6 +929,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					spellitems.scrolls.push(i);
 				}
 			}
+			else if (i.type === "Wound") {
+				slots.wounds += i.slotsUsed;
+				inventory.wounds.push(i);
+			}
 			else if (i.type === "Boon") {
 				if (boons[i.system.boonType]) {
 					boons[i.system.boonType].items.push(i);
@@ -978,7 +984,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 
 		// calculate total slots
-		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
+		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems + slots.wounds;
 
 		const classAbilities = [];
 

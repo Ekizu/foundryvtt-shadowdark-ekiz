@@ -335,6 +335,11 @@ SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
 SHADOWDARK.inventory.item.light_used: (used)
+
+SHADOWDARK.inventory.label.wounds: Wounds
+SHADOWDARK.item.wound_malus: Abilities Malus
+SHADOWDARK.item.wound_slots_used: Slots Used
+
 SHADOWDARK.inventory.label.quantity: Kvantitet
 SHADOWDARK.inventory.label.slots: Platser
 SHADOWDARK.inventory.section.armor: Rustning
@@ -712,6 +717,9 @@ SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
+
+SHADOWDARK.source.ekiz: "Shadowdark RPG: EKIZ"
+
 SHADOWDARK.spell_caster.priest: Präst
 SHADOWDARK.spell_caster.wizard: Trollkarl
 SHADOWDARK.spell_duration.days: Dagar

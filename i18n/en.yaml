@@ -335,6 +335,11 @@ SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Remaining"
 SHADOWDARK.inventory.item.light_seconds_remaining: Less than 1 Minute Remaining
 SHADOWDARK.inventory.item.light_used: (used)
+
+SHADOWDARK.inventory.label.wounds: Wounds
+SHADOWDARK.item.wound_malus: Abilities Malus
+SHADOWDARK.item.wound_slots_used: Slots Used
+
 SHADOWDARK.inventory.label.quantity: Qty
 SHADOWDARK.inventory.label.slots: Slots
 SHADOWDARK.inventory.section.armor: Armor
@@ -712,6 +717,9 @@ SHADOWDARK.source.cursed-scroll-1: Cursed Scroll Vol.1, Diablerie!
 SHADOWDARK.source.cursed-scroll-2: Cursed Scroll Vol.2, Red Sands
 SHADOWDARK.source.cursed-scroll-3: Cursed Scroll Vol.3, Midnight Sun
 SHADOWDARK.source.quickstart: "Shadowdark RPG: Quickstart Set"
+
+SHADOWDARK.source.ekiz: "Shadowdark RPG: EKIZ"
+
 SHADOWDARK.spell_caster.priest: Priest
 SHADOWDARK.spell_caster.wizard: Wizard
 SHADOWDARK.spell_duration.days: Days

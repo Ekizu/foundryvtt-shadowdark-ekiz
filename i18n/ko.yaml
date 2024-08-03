@@ -335,6 +335,11 @@ SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
 SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다
 SHADOWDARK.inventory.item.light_used: (used)
+
+SHADOWDARK.inventory.label.wounds: Wounds
+SHADOWDARK.item.wound_malus: Abilities Malus
+SHADOWDARK.item.wound_slots_used: Slots Used
+
 SHADOWDARK.inventory.label.quantity: 수량
 SHADOWDARK.inventory.label.slots: 슬롯
 SHADOWDARK.inventory.section.armor: 방어구
@@ -712,6 +717,9 @@ SHADOWDARK.source.cursed-scroll-1: 커스드 스크롤 Vol.1, 다이어블러리
 SHADOWDARK.source.cursed-scroll-2: 커스드 스크롤 Vol.2, 레드 샌드
 SHADOWDARK.source.cursed-scroll-3: 커스드 스크롤 Vol.3, 미드나이트 선
 SHADOWDARK.source.quickstart: "섀도다크 RPG: 퀵스타트 세트"
+
+SHADOWDARK.source.ekiz: "Shadowdark RPG: EKIZ"
+
 SHADOWDARK.spell_caster.priest: 성직자
 SHADOWDARK.spell_caster.wizard: 마법사
 SHADOWDARK.spell_duration.days: 일
