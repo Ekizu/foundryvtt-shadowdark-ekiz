@@ -382,7 +382,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: 가죽 갑옷
 SHADOWDARK.item.armor.base_armor.plate_mail: 판금 갑옷
 SHADOWDARK.item.armor.base_armor.shield: 방패
 SHADOWDARK.item.armor.base_armor.title: 기본 갑옷
-SHADOWDARK.item.cost: 가격
+SHADOWDARK.item.cost: Cost for Max Qty
 SHADOWDARK.item.description: 설명
 SHADOWDARK.item.effect.category.condition: 상태
 SHADOWDARK.item.effect.category.effect: 효과
@@ -443,7 +443,7 @@ SHADOWDARK.item.equipped: 장착 중
 SHADOWDARK.item.inventory_free_carry: 슬롯 소모 안 함
 SHADOWDARK.item.inventory_per_slot: 슬롯 당 최대값
 SHADOWDARK.item.inventory_quantity: 수량
-SHADOWDARK.item.inventory_slots: 아이템별 슬롯
+SHADOWDARK.item.inventory_slots: Slots for Max Qty
 SHADOWDARK.item.level: 레벨
 SHADOWDARK.item.light.is_source: 광원
 SHADOWDARK.item.light.longevity: 유지시간 (분)

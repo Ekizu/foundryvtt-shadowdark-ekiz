@@ -382,7 +382,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Läderrustning
 SHADOWDARK.item.armor.base_armor.plate_mail: Pansarrustning
 SHADOWDARK.item.armor.base_armor.shield: Sköld
 SHADOWDARK.item.armor.base_armor.title: Grundrustning
-SHADOWDARK.item.cost: Kostnad
+SHADOWDARK.item.cost: Cost for Max Qty
 SHADOWDARK.item.description: Beskrivning
 SHADOWDARK.item.effect.category.condition: Tillstånd
 SHADOWDARK.item.effect.category.effect: Effekt
@@ -443,7 +443,7 @@ SHADOWDARK.item.equipped: Buren
 SHADOWDARK.item.inventory_free_carry: Fri kapacitet
 SHADOWDARK.item.inventory_per_slot: Max antal per plats
 SHADOWDARK.item.inventory_quantity: Kvantitet
-SHADOWDARK.item.inventory_slots: Platser per föremål
+SHADOWDARK.item.inventory_slots: Slots for Max Qty
 SHADOWDARK.item.level: Nivå
 SHADOWDARK.item.light.is_source: Ljuskälla
 SHADOWDARK.item.light.longevity: Livslängd (min)

@@ -382,7 +382,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Armure de Cuir
 SHADOWDARK.item.armor.base_armor.plate_mail: Armure de Plate
 SHADOWDARK.item.armor.base_armor.shield: Bouclier
 SHADOWDARK.item.armor.base_armor.title: Armure de Base
-SHADOWDARK.item.cost: Coût
+SHADOWDARK.item.cost: Cost for Max Qty
 SHADOWDARK.item.description: Description
 SHADOWDARK.item.effect.category.condition: États
 SHADOWDARK.item.effect.category.effect: Effet
@@ -443,7 +443,7 @@ SHADOWDARK.item.equipped: Équipé
 SHADOWDARK.item.inventory_free_carry: Free Carry
 SHADOWDARK.item.inventory_per_slot: Max per Slot
 SHADOWDARK.item.inventory_quantity: Quantité
-SHADOWDARK.item.inventory_slots: Slots per Item
+SHADOWDARK.item.inventory_slots: Slots for Max Qty
 SHADOWDARK.item.level: Niveau
 SHADOWDARK.item.light.is_source: Source de Lumière
 SHADOWDARK.item.light.longevity: Longevity (Mins)

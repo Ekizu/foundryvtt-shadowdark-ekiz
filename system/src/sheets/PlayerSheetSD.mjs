@@ -756,6 +756,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 		}
 	}
 
+	_roundToOneDecimal(number) {
+		return Math.round(number * 10) / 10;
+	}
+
 	async _prepareItems(context) {
 		const gems = [];
 
@@ -850,12 +854,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 				const perSlot = i.system.slots.per_slot; // combien d'items dans une stack (1 slot)
 				const quantity = i.system.quantity; // combien d'items
-				const slotsUsed = i.system.slots.slots_used; // slots utilisé par unité
+				const slotsUsed = i.system.slots.slots_used; // slots utilisé pour Max Qty
 
-				let totalSlotsUsed = Math.ceil(quantity / perSlot) * slotsUsed;
+				//let totalSlotsUsed = Math.ceil(quantity / perSlot) * slotsUsed;
+				let totalSlotsUsed = this._roundToOneDecimal((quantity / perSlot) * slotsUsed);
 				totalSlotsUsed -= freeCarry * slotsUsed;
 
-				i.slotsUsed = totalSlotsUsed;
+				i.slotsUsed = totalSlotsUsed >= 0 ? totalSlotsUsed : 0;
 
 				// calculate slot usage
 				if (!i.system.stashed) {

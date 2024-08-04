@@ -382,7 +382,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Lederrüstung
 SHADOWDARK.item.armor.base_armor.plate_mail: Plattenrüstung
 SHADOWDARK.item.armor.base_armor.shield: Schild
 SHADOWDARK.item.armor.base_armor.title: Basisrüstung
-SHADOWDARK.item.cost: Kosten
+SHADOWDARK.item.cost: Cost for Max Qty
 SHADOWDARK.item.description: Beschreibung
 SHADOWDARK.item.effect.category.condition: Condition
 SHADOWDARK.item.effect.category.effect: Effect
@@ -443,7 +443,7 @@ SHADOWDARK.item.equipped: Angelegt
 SHADOWDARK.item.inventory_free_carry: Freies Tragen
 SHADOWDARK.item.inventory_per_slot: Max pro Platz
 SHADOWDARK.item.inventory_quantity: Menge
-SHADOWDARK.item.inventory_slots: Plätze pro Gegenstand
+SHADOWDARK.item.inventory_slots: Slots for Max Qty
 SHADOWDARK.item.level: Stufe
 SHADOWDARK.item.light.is_source: Lichtquelle
 SHADOWDARK.item.light.longevity: Leuchtdauer (Min)

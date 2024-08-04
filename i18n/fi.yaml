@@ -382,7 +382,7 @@ SHADOWDARK.item.armor.base_armor.leather_armor: Nahkapanssari
 SHADOWDARK.item.armor.base_armor.plate_mail: Levyhaarniska
 SHADOWDARK.item.armor.base_armor.shield: Kilpi
 SHADOWDARK.item.armor.base_armor.title: Pohjapanssari
-SHADOWDARK.item.cost: Hinta
+SHADOWDARK.item.cost: Cost for Max Qty
 SHADOWDARK.item.description: Kuvaus
 SHADOWDARK.item.effect.category.condition: Kunto
 SHADOWDARK.item.effect.category.effect: Efekti
@@ -443,7 +443,7 @@ SHADOWDARK.item.equipped: Käytössä
 SHADOWDARK.item.inventory_free_carry: Vapaat kannettavat
 SHADOWDARK.item.inventory_per_slot: Maksimi per tarviketila
 SHADOWDARK.item.inventory_quantity: Lukumäärä
-SHADOWDARK.item.inventory_slots: Tarviketiloja per esine
+SHADOWDARK.item.inventory_slots: Slots for Max Qty
 SHADOWDARK.item.level: Taso
 SHADOWDARK.item.light.is_source: Valonlähde
 SHADOWDARK.item.light.longevity: Kestoaika (min)

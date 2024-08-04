@@ -1287,6 +1287,28 @@ export default class ActorSD extends Actor {
 		}
 	}
 
+	async computeSellCost(coins, item) {
+
+		let ratio = 1;
+		if (!item.isGem()) {
+			ratio = item.system.quantity / item.system.slots.per_slot;
+		}
+
+		let value_in_copper = ((item.system.cost.gp * 100) + (item.system.cost.sp * 10) + item.system.cost.cp) * ratio;
+
+		const gp = Math.floor(value_in_copper / 100);
+		value_in_copper = value_in_copper % 100
+
+		const sp = Math.floor(value_in_copper / 10);
+		value_in_copper = value_in_copper % 10
+
+		const cp = Math.round(value_in_copper);
+
+		coins.gp += gp;
+		coins.sp += sp;
+		coins.cp += cp;
+	}
+
 	async sellAllGems() {
 		const items = this.items.filter(item => item.type === "Gem");
 		return this.sellAllItems(items);
@@ -1300,9 +1322,7 @@ export default class ActorSD extends Actor {
 		for (let i = 0; i < items.length; i++) {
 			const item = items[i];
 
-			coins.gp += item.system.cost.gp;
-			coins.sp += item.system.cost.sp;
-			coins.cp += item.system.cost.cp;
+			this.computeSellCost(coins, item);
 
 			soldItems.push(item._id);
 		}
@@ -1323,9 +1343,7 @@ export default class ActorSD extends Actor {
 		const item = this.getEmbeddedDocument("Item", itemId);
 		const coins = this.system.coins;
 
-		coins.gp += item.system.cost.gp;
-		coins.sp += item.system.cost.sp;
-		coins.cp += item.system.cost.cp;
+		this.computeSellCost(coins, item);
 
 		await this.deleteEmbeddedDocuments(
 			"Item",

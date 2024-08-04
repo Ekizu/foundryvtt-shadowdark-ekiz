@@ -271,6 +271,10 @@ export default class ItemSD extends Item {
 		return this.type === "Talent";
 	}
 
+	isGem() {
+		return this.type === "Gem";
+	}
+
 	isWeapon() {
 		return this.type === "Weapon";
 	}
