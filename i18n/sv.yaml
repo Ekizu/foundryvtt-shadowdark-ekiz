@@ -649,6 +649,9 @@ SHADOWDARK.sheet.class.player: Shadowdark Spelarblad
 SHADOWDARK.sheet.general.item_create.tooltip: Skapa {type} objekt
 SHADOWDARK.sheet.general.item_delete.title: Ta bort föremål
 SHADOWDARK.sheet.general.item_edit.title: Förändra föremål
+
+SHADOWDARK.sheet.general.rest: Rest
+
 SHADOWDARK.sheet.general.roll_hp: Rulla KP
 SHADOWDARK.sheet.item.tab.description: Beskrivning
 SHADOWDARK.sheet.item.tab.details: Detaljer

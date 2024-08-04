@@ -20,6 +20,10 @@ export default class ActorSheetSD extends ActorSheet {
 			event => shadowdark.utils.toggleItemDetails(event.currentTarget)
 		);
 
+		html.find("[data-action='pc-rest']").click(
+			event => this._onRest(event)
+		);
+
 		html.find("[data-action='item-attack']").click(
 			event => this._onRollAttack(event)
 		);
@@ -199,6 +203,38 @@ export default class ActorSheetSD extends ActorSheet {
 			case "language":
 				new select.LanguageSelector(this.actor).render(true);
 				break;
+		}
+	}
+
+	async _onRest(event) {
+		this.actor.resetToFullHP();
+		const wounds = await this.actor.getWounds();
+		if (wounds.length > 0)
+		{
+			const woundItemId = wounds[0]._id;
+			await this.actor.deleteEmbeddedDocuments(
+				"Item",
+				[woundItemId]
+			);
+		}
+		const resetableItems = await this.actor.getResetableItems();
+		for (const item of resetableItems) {
+			this.actor.updateEmbeddedDocuments(
+				"Item", [{
+					"_id": item.id,
+					"system.lost": false,
+				}]
+			);
+		}
+		const limitedUsesItems = await this.actor.getLimitedUsesItems();
+		for (const item of limitedUsesItems) {
+			const maxUses = item.system.uses.max;
+			this.actor.updateEmbeddedDocuments(
+				"Item", [{
+					"_id": item.id,
+					"system.uses.available": maxUses,
+				}]
+			);
 		}
 	}
 

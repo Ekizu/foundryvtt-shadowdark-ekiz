@@ -649,6 +649,9 @@ SHADOWDARK.sheet.class.player: 섀도다크 플레이어 시트
 SHADOWDARK.sheet.general.item_create.tooltip: '{type} 아이템 만들기'
 SHADOWDARK.sheet.general.item_delete.title: 아이템 삭제
 SHADOWDARK.sheet.general.item_edit.title: 아이템 편집
+
+SHADOWDARK.sheet.general.rest: Rest
+
 SHADOWDARK.sheet.general.roll_hp: HP 굴리기
 SHADOWDARK.sheet.item.tab.description: 설명
 SHADOWDARK.sheet.item.tab.details: 세부 사항

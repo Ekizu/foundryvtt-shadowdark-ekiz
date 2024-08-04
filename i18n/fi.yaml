@@ -649,6 +649,9 @@ SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
 SHADOWDARK.sheet.general.item_create.tooltip: Luo {type} esine
 SHADOWDARK.sheet.general.item_delete.title: Poista esine
 SHADOWDARK.sheet.general.item_edit.title: Muokkaa esinettä
+
+SHADOWDARK.sheet.general.rest: Rest
+
 SHADOWDARK.sheet.general.roll_hp: Osumapisteheitto
 SHADOWDARK.sheet.item.tab.description: Kuvaus
 SHADOWDARK.sheet.item.tab.details: Yksityiskohdat

@@ -243,6 +243,14 @@ export default class ItemSD extends Item {
 		return propertyItem ? true : false;
 	}
 
+	isResetable() {
+		return 'lost' in this.system;
+	}
+
+	isLimitedUses() {
+		return 'limitedUses' in this.system;
+	}
+
 	isActiveLight() {
 		return this.isLight() && this.system.light.active;
 	}
