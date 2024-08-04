@@ -331,6 +331,9 @@ SHADOWDARK.inventory.carried_gear: Carried Gear
 SHADOWDARK.inventory.coins: Mynt
 SHADOWDARK.inventory.equipped_gear: Equipped Gear
 SHADOWDARK.inventory.gear: Gear
+
+SHADOWDARK.inventory.wounds: Wounds
+
 SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
