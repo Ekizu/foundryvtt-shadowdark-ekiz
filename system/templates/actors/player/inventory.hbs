@@ -195,34 +195,6 @@
 
 			<br>
 
-			<!--Wounds
-			<div class="SD-banner">{{localize "SHADOWDARK.inventory.wounds"}}</div>
-				<ol class="SD-list item-list">
-					<li class="header">
-						<div class="item-name">Wounds</div>
-						<div class="flex-80-px">Type</div>
-						<div class="malus">Malus</div>
-						<div class="slots">Slots</div>
-						</div>
-					</li>
-
-				{{#each inventory.wounds as |item|}}
-					<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
-						<div class="item-image" style="background-image: url({{item.img}})">
-							<i class="fas fa-comment fa-lg"></i>
-						</div>
-						<a class="item-name" data-action="show-details">
-							{{item.name}}
-						</a>
-						<div class="flex-80-px">{{item.type}}</div>
-						<div class="malus">{{item.abilitiesMalus}}</div>
-						<div class="slots">{{item.slotsUsed}}</div>
-					</li>
-				{{/each}}
-				</ol>
-			<br>
-			-->
-
 			<!--Stashed Gear-->
 			<div class="SD-banner">{{localize "SHADOWDARK.inventory.stashed_gear"}}</div>
 				<ol class="SD-list item-list">
@@ -260,6 +232,31 @@
 				{{/each}}
 				</ol>
 			<br>
+
+			<!--Wounds -->
+			<div class="SD-banner">{{localize "SHADOWDARK.inventory.wounds"}}</div>
+				<ol class="SD-list item-list">
+					<li class="header">
+						<div class="item-name">Wounds</div>
+						<div class="flex-80-px">Type</div>
+						</div>
+					</li>
+
+				{{#each inventory.wounds as |item|}}
+					<li class="item" data-item-id="{{item._id}}" data-uuid="Actor.{{../actor._id}}.Item.{{item._id}}">
+						<div class="item-image" style="background-image: url({{item.img}})">
+							<i class="fas fa-comment fa-lg"></i>
+						</div>
+						<a class="item-name" data-action="show-details">
+							{{item.name}}
+						</a>
+						<div class="flex-80-px">{{item.type}}</div>
+					</li>
+				{{/each}}
+				</ol>
+			<br>
+
+
 		</div>
 		<!--Sidebar-->
 		<div>
