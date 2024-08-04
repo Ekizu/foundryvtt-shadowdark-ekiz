@@ -332,8 +332,6 @@ SHADOWDARK.inventory.coins: 동전
 SHADOWDARK.inventory.equipped_gear: Equipped Gear
 SHADOWDARK.inventory.gear: Gear
 
-SHADOWDARK.inventory.wounds: Wounds
-
 SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
 SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다

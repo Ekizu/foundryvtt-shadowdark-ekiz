@@ -332,8 +332,6 @@ SHADOWDARK.inventory.coins: Pièces
 SHADOWDARK.inventory.equipped_gear: Equipped Gear
 SHADOWDARK.inventory.gear: Gear
 
-SHADOWDARK.inventory.wounds: Wounds
-
 SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutes Restantes"
 SHADOWDARK.inventory.item.light_seconds_remaining: Moins de 1 Minute Restante
