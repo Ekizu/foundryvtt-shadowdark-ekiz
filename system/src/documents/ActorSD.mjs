@@ -166,6 +166,13 @@ export default class ActorSD extends Actor {
 
 	async _resetToFullHP(options={}) {
 		const maxHp = this.system.attributes.hp.max;
+
+		console.log('resetToFullHP: max hp: %d, base: %d, bonus: %d, value: %d',
+					this.system.attributes.hp.max,
+					this.system.attributes.hp.base,
+					this.system.attributes.hp.bonus,
+					this.system.attributes.hp.value);
+
 		this.update({
 			"system.attributes.hp.value": maxHp,
 		});
