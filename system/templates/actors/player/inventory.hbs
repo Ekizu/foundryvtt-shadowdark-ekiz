@@ -240,7 +240,6 @@
 						<div class="item-name">Wounds</div>
 						<div class="flex-80-px">Type</div>
 						<div class="slots">Slots</div>
-						<div class="actions" style="flex: 0 0 30px">
 						</div>
 					</li>
 
@@ -254,15 +253,6 @@
 						</a>
 						<div class="flex-80-px">{{item.type}}</div>
 						<div class="slots">{{item.slotsUsed}}</div>
-						<div class="actions" style="flex: 0 0 30px">
-														<a
-								data-action="toggle-stashed"
-								data-item-id="{{item._id}}"
-								data-tooltip="{{localize 'SHADOWDARK.inventory.tooltip.toggle_stashed'}}"
-							>
-								<i style="color:var(--primary)" class="fa-solid fa-box"></i>
-							</a>
-						</div>
 					</li>
 				{{/each}}
 				</ol>
