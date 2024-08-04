@@ -238,7 +238,7 @@
 				<ol class="SD-list item-list">
 					<li class="header">
 						<div class="item-name">Wounds</div>
-						<div class="flex-80-px">Type</div>
+						<div class="malus">Malus</div>
 						<div class="slots">Slots</div>
 					</li>
 
@@ -250,8 +250,8 @@
 						<a class="item-name" data-action="show-details">
 							{{item.name}}
 						</a>
-						<div class="flex-80-px">{{item.type}}</div>
-						<div class="slots">{{item.slotsUsed}}</div>
+						<div class="malus">{{item.system.abilitiesMalus}}</div>
+						<div class="slots">{{item.system.slotsUsed}}</div>
 					</li>
 				{{/each}}
 				</ol>

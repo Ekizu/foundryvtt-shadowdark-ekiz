@@ -930,8 +930,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				}
 			}
 			else if (i.type === "Wound") {
-				i.slotsUsed = i.system.slotsUsed;
-				slots.wounds += i.slotsUsed;
+				slots.wounds += i.system.slotsUsed;
 				inventory.wounds.push(i);
 			}
 			else if (i.type === "Boon") {
