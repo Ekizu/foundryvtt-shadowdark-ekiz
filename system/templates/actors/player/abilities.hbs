@@ -2,7 +2,9 @@
 	<div class="abilities-grid">
 		<div class="grid-2-columns">
 			{{> actors/player/abilities/hp }}
-			<button type="button" data-action="pc-rest">{{localize "SHADOWDARK.sheet.general.rest"}}</button>
+			<div class="grid-colspan-2">
+				<button type="button" data-action="pc-rest">{{localize "SHADOWDARK.sheet.general.rest"}}</button>
+			</div>
 			{{> actors/player/abilities/ac }}
 			{{> actors/player/abilities/luck }}
 			{{> actors/player/abilities/stats }}
