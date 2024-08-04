@@ -20,15 +20,22 @@
 			</div>
 		</div>
 
-		<!-- Title -->
+		<!-- Ancestry -->
 		<div class="SD-box">
 			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.player.title'}}</label>
+				<label>{{localize "SHADOWDARK.sheet.player.ancestry.label"}}</label>
 				<span>
+					{{#if owner}}
+						<a
+							class="item-selector fas fa-pen-to-square edit-button"
+							data-options="ancestry"
+							for="system.ancestry">
+						</a>
+					{{/if}}
 				</span>
 			</div>
 			<div class="content">
-				{{classTitle}}
+				<a class="content-link" data-link data-uuid="{{system.ancestry}}">{{uuidToName system.ancestry}}</a>
 			</div>
 		</div>
 
@@ -73,22 +80,22 @@
 			</div>
 		</div>
 
-		<!-- Ancestry -->
+		<!-- Deity -->
 		<div class="SD-box">
 			<div class="header">
-				<label>{{localize "SHADOWDARK.sheet.player.ancestry.label"}}</label>
+				<label>Deity</label>
 				<span>
 					{{#if owner}}
 						<a
 							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="ancestry"
-							for="system.ancestry">
+							data-options="deity"
+							for="system.deity">
 						</a>
 					{{/if}}
 				</span>
 			</div>
 			<div class="content">
-				<a class="content-link" data-link data-uuid="{{system.ancestry}}">{{uuidToName system.ancestry}}</a>
+				<a class="content-link" data-link data-uuid="{{system.deity}}">{{uuidToName system.deity}}</a>
 			</div>
 		</div>
 
@@ -113,41 +120,6 @@
 
 	</div>
 
-	<div class="background-grid-b">
-
-		<!-- Alignment -->
-		<div class="SD-box">
-			<div class="header">
-				<label>{{localize 'SHADOWDARK.sheet.actor.alignment'}}</label>
-				<span>
-				</span>
-			</div>
-			<div class="content">
-				<select name="system.alignment">
-					{{selectOptions config.ALIGNMENTS selected=system.alignment localize=false}}
-				</select>
-			</div>
-		</div>
-
-		<!-- Deity -->
-		<div class="SD-box">
-			<div class="header">
-				<label>Deity</label>
-				<span>
-					{{#if owner}}
-						<a
-							class="item-selector fas fa-pen-to-square edit-button"
-							data-options="deity"
-							for="system.deity">
-						</a>
-					{{/if}}
-				</span>
-			</div>
-			<div class="content">
-				<a class="content-link" data-link data-uuid="{{system.deity}}">{{uuidToName system.deity}}</a>
-			</div>
-		</div>
-	</div>
 		<!-- Languages -->
 		<div class="SD-box grid-rowspan-2">
 			<div class="header">
