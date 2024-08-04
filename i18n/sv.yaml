@@ -352,6 +352,9 @@ SHADOWDARK.inventory.section.weapon: Vapen
 SHADOWDARK.inventory.slots_max: Max
 SHADOWDARK.inventory.slots_used: Använda
 SHADOWDARK.inventory.slots: Platser
+
+SHADOWDARK.inventory.wounds: Wounds
+
 SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.tooltip.gem_bag: Öppna ädelstenspåse
 SHADOWDARK.inventory.tooltip.item_decrement: Minska kvantitet

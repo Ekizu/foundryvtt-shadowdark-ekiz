@@ -352,6 +352,9 @@ SHADOWDARK.inventory.section.weapon: Armas
 SHADOWDARK.inventory.slots_max: Máx
 SHADOWDARK.inventory.slots_used: Usado
 SHADOWDARK.inventory.slots: Huecos
+
+SHADOWDARK.inventory.wounds: Wounds
+
 SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.tooltip.gem_bag: Abrir bolsa de gemas
 SHADOWDARK.inventory.tooltip.item_decrement: Reducir cantidad

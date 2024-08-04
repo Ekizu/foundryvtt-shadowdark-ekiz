@@ -352,6 +352,9 @@ SHADOWDARK.inventory.section.weapon: 무기
 SHADOWDARK.inventory.slots_max: 최대
 SHADOWDARK.inventory.slots_used: 사용중
 SHADOWDARK.inventory.slots: 슬롯
+
+SHADOWDARK.inventory.wounds: Wounds
+
 SHADOWDARK.inventory.stashed_gear: Stashed Gear
 SHADOWDARK.inventory.tooltip.gem_bag: 보석 가방 열기
 SHADOWDARK.inventory.tooltip.item_decrement: 수량 감소
