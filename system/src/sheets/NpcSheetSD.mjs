@@ -55,6 +55,23 @@ export default class NpcSheetSD extends ActorSheetSD {
 
 	/** @inheritdoc */
 	activateListeners(html) {
+
+		html.find("[data-action='create-item']").click(
+			event => this._onCreateItem(event)
+		);
+
+		html.find("[data-action='create-treasure']").click(
+			event => this._onCreateTreasure(event)
+		);
+
+		html.find("[data-action='item-decrement']").click(
+			event => this._onItemQuantityDecrement(event)
+		);
+
+		html.find("[data-action='item-increment']").click(
+			event => this._onItemQuantityIncrement(event)
+		);
+
 		html.find("[data-action='item-use-ability']").click(
 			event => this._onUseAbility(event)
 		);
@@ -84,6 +101,90 @@ export default class NpcSheetSD extends ActorSheetSD {
 		await this._prepareItems(context);
 
 		return context;
+	}
+
+	async _onCreateItem(event) {
+		new Dialog( {
+			title: game.i18n.localize("SHADOWDARK.dialog.create_custom_item"),
+			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-item.hbs"),
+			buttons: {
+				create: {
+					label: game.i18n.localize("SHADOWDARK.dialog.create"),
+					callback: async html => {
+						// create item from dialog data
+						const itemData = {
+							name: html.find("#item-name").val(),
+							type: html.find("#item-type").val(),
+							system: {},
+						};
+						const [newItem] = await this.actor.createEmbeddedDocuments("Item", [itemData]);
+						newItem.sheet.render(true);
+					},
+				},
+			},
+			default: "create",
+		}).render(true);
+	}
+
+	async _onCreateTreasure(event) {
+		new Dialog( {
+			title: game.i18n.localize("SHADOWDARK.dialog.create_treasure"),
+			content: await renderTemplate("systems/shadowdark/templates/dialog/create-new-treasure.hbs"),
+			buttons: {
+				create: {
+					label: game.i18n.localize("SHADOWDARK.dialog.create"),
+					callback: async html => {
+						// create treasure from dialog data
+						const itemData = {
+							name: html.find("#item-name").val(),
+							type: "Basic",
+							system: {
+								treasure: true,
+								cost: {
+									gp: parseInt(html.find("#item-gp").val()),
+									sp: parseInt(html.find("#item-sp").val()),
+									cp: parseInt(html.find("#item-cp").val()),
+								},
+							},
+						};
+						await this.actor.createEmbeddedDocuments("Item", [itemData]);
+					},
+				},
+			},
+			default: "create",
+		}).render(true);
+	}
+
+	async _onItemQuantityDecrement(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (item.system.quantity > 0) {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					"_id": itemId,
+					"system.quantity": item.system.quantity - 1,
+				},
+			]);
+		}
+	}
+
+	async _onItemQuantityIncrement(event) {
+		event.preventDefault();
+
+		const itemId = $(event.currentTarget).data("item-id");
+		const item = this.actor.getEmbeddedDocument("Item", itemId);
+
+		if (item.system.quantity < item.system.slots.per_slot) {
+			this.actor.updateEmbeddedDocuments("Item", [
+				{
+					"_id": itemId,
+					"system.quantity": item.system.quantity + 1,
+				},
+			]);
+		}
 	}
 
 	_roundToOneDecimal(number) {
