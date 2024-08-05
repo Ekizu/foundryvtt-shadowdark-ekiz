@@ -196,7 +196,6 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const specials = [];
 		const spells = [];
 		const features = [];
-		const gems = [];
 
 		const effects = {
 			effect: {
@@ -225,7 +224,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 		const freeCarrySeen = {};
 
 		for (const i of this._sortAllItems(context)) {
-			if (i.system.isPhysical && i.type !== "Gem") {
+			if (i.system.isPhysical) {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
 
 				// We calculate how many slots are used by this item, taking
@@ -252,7 +251,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 				i.slotsUsed = totalSlotsUsed >= 0 ? totalSlotsUsed : 0;
 
 				// calculate slot usage
-				if (i.system.treasure) {
+				if (i.system.treasure || i.isGem()) {
 					slots.treasure += i.slotsUsed;
 				}
 				else {
@@ -260,7 +259,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 				}
 
 				// sort into groups
-				if (i.system.treasure) {
+				if (i.system.treasure || i.isGem()) {
 					inventory.treasure.push(i);
 				}
 				else {

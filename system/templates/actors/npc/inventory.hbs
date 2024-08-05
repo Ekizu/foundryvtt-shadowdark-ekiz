@@ -2,6 +2,9 @@
 	<div class="inventory-grid">
 		<div>
 
+			<div class="SD-banner">{{localize "SHADOWDARK.inventory.equipped_gear"}}</div>
+			<br>
+
 			<!--Carried Gear-->
 			<div class="SD-banner">{{localize "SHADOWDARK.inventory.carried_gear"}}</div>
 				<ol class="SD-list item-list">
@@ -103,7 +106,11 @@
 				</ol>
 
 			<br>
+
+			<div class="SD-banner">{{localize "SHADOWDARK.inventory.stashed_gear"}}</div>
 			<br>
+
+			<div class="SD-banner">{{localize "SHADOWDARK.inventory.wounds"}}</div>
 			<br>
 
 		</div>
@@ -112,7 +119,7 @@
 			<div class="grid-1-columns">
 				{{> actors/npc/inventory/slots }}
 				{{> actors/npc/inventory/coins }}
-				{{> actors/npc/inventory/gems }}
+				<!-- {{> actors/npc/inventory/gems }} -->
 			</div>
 		</div>
 	</div>
