@@ -638,6 +638,9 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Muut
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Vähennä käyttökertoja
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Lisää käyttökertoja
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.actor.ac: Puolustuspisteet
 SHADOWDARK.sheet.actor.alignment: Vakaumus
 SHADOWDARK.sheet.actor.hp_max: Max

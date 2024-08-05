@@ -638,6 +638,9 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.actor.ac: RK
 SHADOWDARK.sheet.actor.alignment: Gesinnung
 SHADOWDARK.sheet.actor.hp_max: Max
