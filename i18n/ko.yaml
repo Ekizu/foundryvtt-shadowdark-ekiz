@@ -134,6 +134,8 @@ SHADOWDARK.boons.secret: Secret
 
 SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
+SHADOWDARK.skills.skill: Skill
+SHADOWDARK.skills.knowledge: Knowledge
 
 SHADOWDARK.chat_card.button.attack: 명중 굴림
 SHADOWDARK.chat_card.button.cast_spell: 주문 시전

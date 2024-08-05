@@ -53,6 +53,12 @@ SHADOWDARK.BOON_TYPES = {
 	blessing: "SHADOWDARK.boons.blessing",
 };
 
+SHADOWDARK.SKILL_TYPES = {
+	generic: "SHADOWDARK.skills.generic",
+	skill: "SHADOWDARK.skills.skill",
+	knowledge: "SHADOWDARK.skills.knowledge",
+};
+
 SHADOWDARK.DEFAULTS = {
 	BASE_ARMOR_CLASS: 10,
 	GEAR_SLOTS: 10,

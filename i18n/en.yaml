@@ -134,6 +134,8 @@ SHADOWDARK.boons.secret: Secret
 
 SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
+SHADOWDARK.skills.skill: Skill
+SHADOWDARK.skills.knowledge: Knowledge
 
 SHADOWDARK.chat_card.button.attack: Roll Attack
 SHADOWDARK.chat_card.button.cast_spell: Cast Spell

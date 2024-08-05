@@ -12,6 +12,10 @@
 			{{> items/partials/boon }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Skill"}}
+			{{> items/partials/skill }}
+		{{/ifEq}}
+
 		{{#ifEq item.type "Class Ability"}}
 			{{> items/partials/class-ability }}
 		{{/ifEq}}

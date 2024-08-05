@@ -36,6 +36,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/ancestry.hbs",
 		"systems/shadowdark/templates/items/partials/armor.hbs",
 		"systems/shadowdark/templates/items/partials/boon.hbs",
+		"systems/shadowdark/templates/items/partials/skill.hbs",
 		"systems/shadowdark/templates/items/partials/choice-selector.hbs",
 		"systems/shadowdark/templates/items/partials/class-ability.hbs",
 		"systems/shadowdark/templates/items/partials/class.hbs",
