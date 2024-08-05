@@ -9,7 +9,14 @@
 				{{slots.total}}
 			</div>
 			<div>/</div>
-			<div>{{gearSlots}}</div>
+			<div>
+				{{numberInput
+					actor.system.slots
+					name="system.slots"
+					class="slots-value"
+					placeholder="10"
+				}}
+			</div>
 		</div>
 		<hr>
 		<div class="slot-grid">
@@ -19,8 +26,6 @@
 			{{localize "SHADOWDARK.inventory.section.treasure"}}
 			<div style="text-align: right">{{slots.coins}}</div>
 			{{localize "SHADOWDARK.inventory.coins"}}
-			<div style="text-align: right">{{slots.gems}}</div>
-			{{localize "SHADOWDARK.inventory.gems"}}
 		</div>
 	</div>
 </div>

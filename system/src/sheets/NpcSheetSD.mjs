@@ -91,6 +91,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 	/** @override */
 	async getData(options) {
 		const context = await super.getData(options);
+		context.gearSlots = context.system.slots;
 
 		// Ability Scores
 		for (const [key, ability] of Object.entries(context.system.abilities)) {

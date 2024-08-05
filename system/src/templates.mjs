@@ -12,7 +12,6 @@ export default function() {
 		"systems/shadowdark/templates/actors/npc/spells.hbs",
 		"systems/shadowdark/templates/actors/npc/inventory.hbs",
 		"systems/shadowdark/templates/actors/npc/inventory/coins.hbs",
-		"systems/shadowdark/templates/actors/npc/inventory/gems.hbs",
 		"systems/shadowdark/templates/actors/npc/inventory/slots.hbs",
 		"systems/shadowdark/templates/actors/partials/effects.hbs",
 		"systems/shadowdark/templates/actors/player/abilities.hbs",
