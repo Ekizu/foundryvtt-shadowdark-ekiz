@@ -70,8 +70,19 @@ export default class SpellBookSD extends FormApplication {
 			class: await fromUuid(this.classID),
 		};
 
+		let actualClassID = this.classID;
+		if (this.data.class.name.includes("Paladin")) {
+			actualClassID = "Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD";
+		}
+		else if (this.data.class.name.includes("Knight of St. Ydris")) {
+			actualClassID = "Compendium.shadowdark.classes.Item.KGnBAFiTiLHZJUND";
+		}
+
+		console.log(`SpellBook: load spells for class: ${this.data.class.name}, classID: ${this.classID}, actualClassID: ${actualClassID}`);
+
 		// load all spells for class based on source filter
-		const spells = await shadowdark.compendiums.classSpellBook(this.classID);
+		//const spells = await shadowdark.compendiums.classSpellBook(this.classID);
+		const spells = await shadowdark.compendiums.classSpellBook(actualClassID);
 
 		const spellList = {};
 		for (const spell of spells) {
