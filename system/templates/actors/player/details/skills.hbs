@@ -1,0 +1,22 @@
+<ol class="SD-list">
+	<li class="header">
+		<div class="item-name">{{localize "SHADOWDARK.sheet.player.skill.label"}}</div>
+		<div class="duration">{{localize "SHADOWDARK.skill.type.label"}}</div>
+	</li>
+
+	{{#each skills as |skillType|}}
+		{{#each skillType.items as |skill|}}
+			<li class="item" data-item-id="{{skill._id}}" data-uuid="Actor.{{../../actor._id}}.Item.{{skill._id}}">
+				<div class="item-image" style="background-image: url({{skill.img}})">
+					<i class="fas fa-comment fa-lg"></i>
+				</div>
+				<a class="item-name" data-action="show-details">
+					{{skill.name}}
+				</a>
+				<div class="duration">
+					{{skillType.label}}
+				</div>
+			</li>
+		{{/each}}
+	{{/each}}
+</ol>

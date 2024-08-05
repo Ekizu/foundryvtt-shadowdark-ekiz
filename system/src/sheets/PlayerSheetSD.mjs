@@ -778,6 +778,13 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			},
 		};
 
+		const skills = {
+			generic: {
+				label: game.i18n.localize("SHADOWDARK.skills.generic"),
+				items: [],
+			},
+		};
+
 		const inventory = {
 			equipped: [],
 			stashed: [],
@@ -943,6 +950,11 @@ export default class PlayerSheetSD extends ActorSheetSD {
 					boons[i.system.boonType].items.push(i);
 				}
 			}
+			else if (i.type === "Skill") {
+				if (skills[i.system.skillType]) {
+					skills[i.system.skillType].items.push(i);
+				}
+			}
 			else if (i.type === "Gem") {
 				gems.push(i);
 			}
@@ -1016,6 +1028,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 
 		context.attacks = attacks;
 		context.boons = boons;
+		context.skills = skills;
 		context.totalCoins = totalCoins;
 		context.gems = {items: gems, totalGems};
 		context.inventory = inventory;

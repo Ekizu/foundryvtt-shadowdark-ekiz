@@ -113,6 +113,7 @@ SHADOWDARK.NPC_ATTACK_TYPES = {
 SHADOWDARK.NPC_MOVES = {
 	none: "SHADOWDARK.npc_move.none",
 	close: "SHADOWDARK.npc_move.close",
+	halfNear: "SHADOWDARK.npc_move.half_near",
 	near: "SHADOWDARK.npc_move.near",
 	doubleNear: "SHADOWDARK.npc_move.double_near",
 	tripleNear: "SHADOWDARK.npc_move.triple_near",

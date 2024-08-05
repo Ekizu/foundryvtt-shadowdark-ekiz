@@ -131,6 +131,10 @@ SHADOWDARK.boon.type.label: Favörtyp
 SHADOWDARK.boons.blessing: Välsignelse
 SHADOWDARK.boons.oath: Eder
 SHADOWDARK.boons.secret: Hemlighet
+
+SHADOWDARK.skill.type.label: Skill Type
+SHADOWDARK.skills.generic: Generic
+
 SHADOWDARK.chat_card.button.attack: Rulla attack
 SHADOWDARK.chat_card.button.cast_spell: Kasta besvärjelse
 SHADOWDARK.chat_card.button.learn_spell: Lär dig besvärjelse
@@ -555,6 +559,9 @@ SHADOWDARK.notify.combat.clockwise_initiative_only_gm: När medsols initiativ ä
 SHADOWDARK.npc_attack.type.physical: Fysisk
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Nära
+
+SHADOWDARK.npc_move.half_near: Half Near
+
 SHADOWDARK.npc_move.double_near: Dubbelnära
 SHADOWDARK.npc_move.far: Långt
 SHADOWDARK.npc_move.near: Nära
@@ -684,6 +691,11 @@ SHADOWDARK.sheet.player.background.tooltip: Din historia och tidigare erfarenhet
 SHADOWDARK.sheet.player.boon.label: Boon
 SHADOWDARK.sheet.player.boons.blessings.label: Välsignelser
 SHADOWDARK.sheet.player.boons.label: Favörer
+
+SHADOWDARK.sheet.player.skill.label: Skill
+SHADOWDARK.sheet.player.skills.generics.label: Generics
+SHADOWDARK.sheet.player.skills.label: Skills
+
 SHADOWDARK.sheet.player.boons.name: Boon Name
 SHADOWDARK.sheet.player.boons.oaths.label: Eder
 SHADOWDARK.sheet.player.boons.secrets.label: Hemligheter

@@ -24,6 +24,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/player/abilities/stats.hbs",
 		"systems/shadowdark/templates/actors/player/details.hbs",
 		"systems/shadowdark/templates/actors/player/details/boons.hbs",
+		"systems/shadowdark/templates/actors/player/details/skills.hbs",
 		"systems/shadowdark/templates/actors/player/inventory.hbs",
 		"systems/shadowdark/templates/actors/player/inventory/coins.hbs",
 		"systems/shadowdark/templates/actors/player/inventory/gems.hbs",

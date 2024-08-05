@@ -131,6 +131,10 @@ SHADOWDARK.boon.type.label: Type d'avantage
 SHADOWDARK.boons.blessing: Bénédiction
 SHADOWDARK.boons.oath: Serment
 SHADOWDARK.boons.secret: Secret
+
+SHADOWDARK.skill.type.label: Skill Type
+SHADOWDARK.skills.generic: Generic
+
 SHADOWDARK.chat_card.button.attack: Jet d'Attaque
 SHADOWDARK.chat_card.button.cast_spell: Lancement de sort
 SHADOWDARK.chat_card.button.learn_spell: Apprendre le sort
@@ -555,6 +559,9 @@ SHADOWDARK.notify.combat.clockwise_initiative_only_gm: When Clockwise Initiative
 SHADOWDARK.npc_attack.type.physical: Physical
 SHADOWDARK.npc_attack.type.special: Special
 SHADOWDARK.npc_move.close: Close
+
+SHADOWDARK.npc_move.half_near: Half Near
+
 SHADOWDARK.npc_move.double_near: Double Near
 SHADOWDARK.npc_move.far: Far
 SHADOWDARK.npc_move.near: Near
@@ -684,6 +691,11 @@ SHADOWDARK.sheet.player.background.tooltip: Votre historique et votre expérienc
 SHADOWDARK.sheet.player.boon.label: Boon
 SHADOWDARK.sheet.player.boons.blessings.label: Bénédictions
 SHADOWDARK.sheet.player.boons.label: Avantages
+
+SHADOWDARK.sheet.player.skill.label: Skill
+SHADOWDARK.sheet.player.skills.generics.label: Generics
+SHADOWDARK.sheet.player.skills.label: Skills
+
 SHADOWDARK.sheet.player.boons.name: Boon Name
 SHADOWDARK.sheet.player.boons.oaths.label: Serments
 SHADOWDARK.sheet.player.boons.secrets.label: Secrets

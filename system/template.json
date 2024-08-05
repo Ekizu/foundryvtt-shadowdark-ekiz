@@ -154,6 +154,7 @@
 			"Background",
 			"Basic",
 			"Boon",
+			"Skill",
 			"Class Ability",
 			"Class",
 			"Deity",
@@ -275,6 +276,12 @@
 				"common"
 			],
 			"boonType": "oath"
+		},
+		"Skill": {
+			"templates": [
+				"common"
+			],
+			"skillType": "generic"
 		},
 		"Class": {
 			"templates": [

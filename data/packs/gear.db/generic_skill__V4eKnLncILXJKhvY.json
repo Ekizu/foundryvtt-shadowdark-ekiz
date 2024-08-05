@@ -1,0 +1,17 @@
+{
+	"_id": "V4eKnLncILXJKhvY",
+	"_key": "!items!V4eKnLncILXJKhvY",
+	"effects": [
+	],
+	"folder": "0ws7y8D3IktigkiB",
+	"img": "icons/skills/trades/academics-merchant-scribe.webp",
+	"name": "Generic Skill",
+	"system": {
+		"skillType": "generic",
+		"description": "<p>A generic skill.</p>",
+		"source": {
+			"title": "ekiz"
+		}
+	},
+	"type": "Skill"
+}
