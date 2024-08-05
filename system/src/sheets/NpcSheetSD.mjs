@@ -251,7 +251,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 				i.slotsUsed = totalSlotsUsed >= 0 ? totalSlotsUsed : 0;
 
 				// calculate slot usage
-				if (i.system.treasure || i.isGem()) {
+				if (i.system.treasure || i.type === "Gem") {
 					slots.treasure += i.slotsUsed;
 				}
 				else {
@@ -259,7 +259,7 @@ export default class NpcSheetSD extends ActorSheetSD {
 				}
 
 				// sort into groups
-				if (i.system.treasure || i.isGem()) {
+				if (i.system.treasure || i.type === "Gem") {
 					inventory.treasure.push(i);
 				}
 				else {
