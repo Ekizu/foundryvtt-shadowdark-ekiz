@@ -51,11 +51,18 @@
 				}
 			},
 			"darkAdapted": true,
+			"morale": 7,
 			"move": "near",
 			"moveNote": "",
 			"spellcastingAbility": "",
 			"spellcastingBonus": 0,
-			"spellcastingAttackNum": 0
+			"spellcastingAttackNum": 0,
+			"coins": {
+				"gp": 0,
+				"sp": 0,
+				"cp": 0
+			},
+			"slots": 10
 		},
 		"Player": {
 			"templates": ["shared_details"],

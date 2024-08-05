@@ -10,6 +10,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/npc/partials/hp.hbs",
 		"systems/shadowdark/templates/actors/npc/partials/level.hbs",
 		"systems/shadowdark/templates/actors/npc/spells.hbs",
+		"systems/shadowdark/templates/actors/npc/inventory.hbs",
 		"systems/shadowdark/templates/actors/partials/effects.hbs",
 		"systems/shadowdark/templates/actors/player/abilities.hbs",
 		"systems/shadowdark/templates/actors/player/abilities/ac.hbs",
