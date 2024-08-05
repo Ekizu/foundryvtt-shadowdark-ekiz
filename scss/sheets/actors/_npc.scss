@@ -29,6 +29,12 @@
 
 	}
 
+	.inventory-grid {
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		gap: 8px;
+	}
+
 	.grid-dark-adapted {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
