@@ -218,7 +218,6 @@ export default class NpcSheetSD extends ActorSheetSD {
 			gear: 0,
 			treasure: 0,
 			coins: 0,
-			gems: 0,
 		};
 
 		const freeCarrySeen = {};
@@ -317,17 +316,10 @@ export default class NpcSheetSD extends ActorSheetSD {
 			slots.coins = Math.ceil((totalCoins - freeCoins) / freeCoins);
 		}
 
-		// Now do the same for gems...
-		let totalGems = gems.length;
-		if (totalGems > 0) {
-			slots.gems = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
-		}
-
 		// calculate total slots
-		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems;
+		slots.total = slots.gear + slots.treasure + slots.coins;
 
 		context.totalCoins = totalCoins;
-		context.gems = {items: gems, totalGems};
 		context.inventory = inventory;
 		context.slots = slots;
 
