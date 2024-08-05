@@ -121,6 +121,8 @@ export default class NpcSheetSD extends ActorSheetSD {
 			gems: 0,
 		};
 
+		const freeCarrySeen = {};
+
 		for (const i of this._sortAllItems(context)) {
 			if (i.system.isPhysical && i.type !== "Gem") {
 				i.showQuantity = i.system.slots.per_slot > 1 ? true : false;
