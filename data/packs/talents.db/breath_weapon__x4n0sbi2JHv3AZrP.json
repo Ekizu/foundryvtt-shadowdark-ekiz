@@ -1,0 +1,20 @@
+{
+	"_id": "x4n0sbi2JHv3AZrP",
+	"_key": "!items!x4n0sbi2JHv3AZrP",
+	"effects": [
+	],
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/magic/fire/beam-jet-stream-yellow.webp",
+	"name": "Breath Weapon",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Once per day, unleash a breath weapon based on your draconic heritage that deals 1d8 damage in a near-length line starting from you.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "ekiz"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

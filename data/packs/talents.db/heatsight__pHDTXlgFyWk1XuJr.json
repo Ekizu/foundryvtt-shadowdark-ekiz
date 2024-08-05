@@ -1,0 +1,20 @@
+{
+	"_id": "pHDTXlgFyWk1XuJr",
+	"_key": "!items!pHDTXlgFyWk1XuJr",
+	"effects": [
+	],
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/magic/perception/eye-ringed-glow-angry-small-red.webp",
+	"name": "Heatsight",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Once per day, you can see the heat signatures of living creatures for 3 rounds.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "ekiz"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}

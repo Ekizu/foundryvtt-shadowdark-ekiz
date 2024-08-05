@@ -1,0 +1,34 @@
+{
+	"_id": "2U2cRMGd04BOPPCq",
+	"_key": "!items!2U2cRMGd04BOPPCq",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Dragonborn",
+	"system": {
+		"description": "<p>Proud descendants of dragons whose honor holds greater value than their own lives.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+				"Compendium.shadowdark.languages.Item.GVbmj6D47b9lbOHz"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"nameTable": "",
+		"predefinedEffects": "",
+		"randomWeight": 1,
+		"source": {
+			"title": "ekiz"
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.x4n0sbi2JHv3AZrP"
+		]
+	},
+	"type": "Ancestry"
+}

@@ -1,0 +1,34 @@
+{
+	"_id": "wdFlgUB0nTqA2rkY",
+	"_key": "!items!wdFlgUB0nTqA2rkY",
+	"effects": [
+	],
+	"folder": null,
+	"img": "icons/environment/people/group.webp",
+	"name": "Trollkin",
+	"system": {
+		"description": "<p>Tall and lanky with brutish appearance, trollkin are seldom welcome among the civilized races.</p>",
+		"languages": {
+			"common": 0,
+			"fixed": [
+				"Compendium.shadowdark.languages.Item.DQzHvoMWSZ0eiRWP",
+				"Compendium.shadowdark.languages.Item.hW4BI5ySXhxQiYiV"
+			],
+			"rare": 0,
+			"select": 0,
+			"selectOptions": [
+			]
+		},
+		"nameTable": "",
+		"predefinedEffects": "",
+		"randomWeight": 1,
+		"source": {
+			"title": "ekiz"
+		},
+		"talentChoiceCount": 1,
+		"talents": [
+			"Compendium.shadowdark.talents.Item.wskIS16SxLXKlkFS"
+		]
+	},
+	"type": "Ancestry"
+}
