@@ -324,6 +324,7 @@ export default class ItemSheetSD extends ItemSheet {
 				"Armor",
 				"Basic",
 				"Boon",
+				"Skill",
 				"Class Ability",
 				"Class",
 				"Deity",
