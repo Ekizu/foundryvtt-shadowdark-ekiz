@@ -43,6 +43,10 @@ SHADOWDARK.app.light-tracker.douse-light: Sammuta valonlähde
 SHADOWDARK.app.light-tracker.hide-inactive: Piilota hahmot/esineet joita ei ole valaistu
 SHADOWDARK.app.light-tracker.show-all-actors: Näytä kaikki hahmot/esineet
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Sammuta kaikki valonlähteet
+
+SHADOWDARK.app.light-tracker.reduce-all-lights: Remove 1 turn of light
+SHADOWDARK.app.light-tracker.increase-all-lights: Add 1 turn of light
+
 SHADOWDARK.app.loading.body: Etsitään kaukaisia maita...
 SHADOWDARK.app.loading.title: Ladataan
 SHADOWDARK.app.npc_attack_ranges.title: Kantamat

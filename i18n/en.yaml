@@ -43,6 +43,10 @@ SHADOWDARK.app.light-tracker.douse-light: Douse Light
 SHADOWDARK.app.light-tracker.hide-inactive: Hide Actors Without Lights
 SHADOWDARK.app.light-tracker.show-all-actors: Show All Actors
 SHADOWDARK.app.light-tracker.turn-out-the-lights: Turn Out the Lights
+
+SHADOWDARK.app.light-tracker.reduce-all-lights: Remove 1 turn of light
+SHADOWDARK.app.light-tracker.increase-all-lights: Add 1 turn of light
+
 SHADOWDARK.app.loading.body: Searching Distant Lands...
 SHADOWDARK.app.loading.title: Loading
 SHADOWDARK.app.npc_attack_ranges.title: Attack Ranges

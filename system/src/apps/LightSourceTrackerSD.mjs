@@ -63,6 +63,30 @@ export default class LightSourceTrackerSD extends Application {
 			}
 		);
 
+		html.find(".reduce-all-lights").click(
+			async event => {
+				event.preventDefault();
+
+				shadowdark.log("Reduce all the lights remaining time");
+
+				if (this.monitoredLightSources.length <= 0) return;
+
+				await this.adjustLightRemainingTime(360);
+			}
+		);
+
+		html.find(".increase-all-lights").click(
+			async event => {
+				event.preventDefault();
+
+				shadowdark.log("Increase all the lights remaining time");
+
+				if (this.monitoredLightSources.length <= 0) return;
+
+				await this.adjustLightRemainingTime(-360);
+			}
+		);
+
 		html.find(".disable-all-lights").click(
 			async event => {
 				event.preventDefault();
@@ -628,4 +652,91 @@ export default class LightSourceTrackerSD extends Application {
 
 		this.render(false);
 	}
+
+	async adjustLightRemainingTime(delta) {
+
+		if (!(this._isEnabled() && game.user.isGM)) return;
+		if (this.updatingLightSources) return;
+
+		shadowdark.log(`Adjust remaining time on light sources by ${delta} seconds`);
+
+		try {
+			this.performingTick = true;
+
+			for (const actorData of this.monitoredLightSources) {
+				const numLightSources = actorData.lightSources.length;
+
+				shadowdark.log(`Updating ${numLightSources} light sources for ${actorData.name}`);
+
+				for (const itemData of actorData.lightSources) {
+					const actor = await game.actors.get(actorData._id);
+
+					const light = itemData.system.light;
+
+					if (itemData.type === "Effect") {
+						const item = actor.getEmbeddedDocument("Item", itemData._id);
+
+						if (item) {
+							const duration = item.remainingDuration;
+							light.remainingSecs = duration?.remaining ?? 0;
+						}
+						else {
+							light.remainingSecs = 0;
+							this.dirty = true;
+						}
+					}
+					else {
+						const longevitySecs = light.longevityMins * 60;
+						light.remainingSecs = Math.max(
+							0,
+							Math.min(longevitySecs, light.remainingSecs - delta)
+						);
+					}
+
+					if (light.remainingSecs <= 0) {
+						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has expired`);
+
+						if (actor.type !== "Light") {
+							await actor.yourLightExpired(itemData._id);
+
+							await actor.deleteEmbeddedDocuments("Item", [itemData._id]);
+						}
+						else {
+							// For light actors, we want to remove the token AND the actor
+							await actor.yourLightExpired(itemData._id);
+							await canvas.scene.tokens
+								.filter(t => t.actor._id === actor._id)
+								.forEach(t => t.delete());
+							await actor.delete();
+						}
+
+						this.dirty = true;
+					}
+					else {
+						shadowdark.log(`Light source ${itemData.name} owned by ${actorData.name} has ${Math.ceil(light.remainingSecs)} seconds remaining`);
+
+						const item = await actor.getEmbeddedDocument(
+							"Item", itemData._id
+						);
+
+						item.update({
+							"system.light.remainingSecs": light.remainingSecs,
+						});
+					}
+				}
+			}
+
+			this.render(false);
+		}
+		catch(error) {
+			shadowdark.log(`An error ocurred updating light sources: ${error}`);
+			console.error(error);
+		}
+		finally {
+			this.performingTick = false;
+		}
+
+		shadowdark.log("Finished updating light sources");
+	}
+
 }
