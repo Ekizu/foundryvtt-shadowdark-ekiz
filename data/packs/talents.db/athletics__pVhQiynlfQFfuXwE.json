@@ -1,0 +1,20 @@
+{
+	"_id": "pVhQiynlfQFfuXwE",
+	"_key": "!items!pVhQiynlfQFfuXwE",
+	"effects": [
+	],
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/environment/people/group.webp",
+	"name": "Athletics",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">Once per day, you can succeed a maneuver that cost no action.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "ekiz"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}
