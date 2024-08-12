@@ -232,9 +232,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 			// Initialize Alignment
 			this.formData.alignments = CONFIG.SHADOWDARK.ALIGNMENTS;
 
-			// setup ability range as 3-18
+			// setup ability range as 3-20
 			this.formData.statRange = [];
-			for (let i =3; i<19; i++) {
+			for (let i =3; i<21; i++) {
 				this.formData.statRange.push(i);
 			}
 
