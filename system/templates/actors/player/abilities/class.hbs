@@ -45,16 +45,18 @@
 						{{/if}}
 					</div>
 					<div class="actions">
-						{{#unless this.system.lost}}
-						<a
-							data-action="use-ability"
-							data-item-id="{{this._id}}"
-							data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_class_ability'}}"
-						>
-							<i class="fa-solid fa-dice-d20"></i>
-						</a>
-						&nbsp;
-						{{/unless}}
+						{{#if this.system.rollable}}
+							{{#unless this.system.lost}}
+							<a
+								data-action="use-ability"
+								data-item-id="{{this._id}}"
+								data-tooltip="{{localize 'SHADOWDARK.sheet.player.tooltip.use_class_ability'}}"
+							>
+								<i class="fa-solid fa-dice-d20"></i>
+							</a>
+							&nbsp;
+							{{/unless}}
+						{{/if}}
 						<a
 							data-action="toggle-lost"
 							data-item-id="{{this._id}}"

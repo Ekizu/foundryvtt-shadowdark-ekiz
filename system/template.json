@@ -312,6 +312,7 @@
 			],
 			"ability": "",
 			"group": "",
+			"rollable": true,
 			"dc": 10,
 			"limitedUses": false,
 			"loseOnFailure": true,

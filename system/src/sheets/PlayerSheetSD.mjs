@@ -980,6 +980,7 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				effects[category].items.push(i);
 			}
 			else if (i.type === "Class Ability") {
+				i.system.rollable = i.system.dc != 0 ? true : false;
 				const group = i.system.group !== ""
 					? i.system.group
 					: game.i18n.localize("SHADOWDARK.sheet.abilities.ungrouped.label");

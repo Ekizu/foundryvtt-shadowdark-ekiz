@@ -1077,15 +1077,15 @@ export default class ActorSD extends Actor {
 		let gearSlots = shadowdark.defaults.GEAR_SLOTS;
 
 		if (this.type === "Player") {
-			const strength = this.system.abilities.str.base
-				+ this.system.abilities.str.bonus;
+			const constitution = this.system.abilities.con.base
+				+ this.system.abilities.con.bonus;
 
-			gearSlots = strength > gearSlots ? strength : gearSlots;
+			gearSlots = constitution > gearSlots ? constitution : gearSlots;
 
-			// Hauler's get to add their Con modifer (if positive)
-			const conModifier = this.abilityModifierWithoutWounds("con");
-			gearSlots += this.system.bonuses.hauler && conModifier > 0
-				? conModifier
+			// Hauler's get to add their Str modifer (if positive)
+			const strModifier = this.abilityModifierWithoutWounds("str");
+			gearSlots += this.system.bonuses.hauler && strModifier > 0
+				? strModifier
 				: 0;
 
 			// Add effects that modify gearslots
