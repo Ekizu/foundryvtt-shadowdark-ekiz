@@ -373,7 +373,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// Roll starting gold
 		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
-			let startingGold = await this._roll("2d6")*5;
+			let startingGold = await this._roll("2d6")*10;
 			this.formData.actor.system.coins.gp = startingGold;
 		}
 
