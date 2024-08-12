@@ -11,7 +11,7 @@
 		"bonuses": {
 			"hauler": "true"
 		},
-		"description": "<p>Add your Constitution modifier, if positive, to your gear slots.</p>",
+		"description": "<p>Add your Strength modifier, if positive, to your gear slots.</p>",
 		"level": 1,
 		"predefinedEffects": "",
 		"source": {
