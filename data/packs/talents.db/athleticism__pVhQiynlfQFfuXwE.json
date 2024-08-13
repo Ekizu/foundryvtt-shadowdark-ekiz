@@ -4,10 +4,10 @@
 	"effects": [
 	],
 	"folder": "MFeFmA2ubOJxaTwm",
-	"img": "icons/environment/people/group.webp",
-	"name": "Athletics",
+	"img": "icons/creatures/mammals/rabbit-movement-glowing-green.webp",
+	"name": "Athleticism",
 	"system": {
-		"description": "<p><span class=\"fontstyle0\">Once per day, you can succeed a maneuver that cost no action.</span></p>",
+		"description": "<p><span class=\"fontstyle0\">Three times per day, you can succeed a maneuver that cost no action.</span></p>",
 		"level": 1,
 		"magicItem": false,
 		"predefinedEffects": "",
