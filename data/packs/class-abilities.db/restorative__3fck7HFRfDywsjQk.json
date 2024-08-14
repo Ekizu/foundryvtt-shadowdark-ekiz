@@ -7,7 +7,7 @@
 	"img": "icons/tools/navigation/map-chart-tan.webp",
 	"name": "Restorative",
 	"system": {
-		"ability": "int",
+		"ability": "wis",
 		"dc": 14,
 		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.QV93CYmgcgJ3UCPf]{Restorative} Ends one poison or disease</p><p></p>",
 		"group": "Herbal Remedy",

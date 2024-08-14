@@ -7,7 +7,7 @@
 	"img": "icons/tools/navigation/map-chart-tan.webp",
 	"name": "Curative",
 	"system": {
-		"ability": "int",
+		"ability": "wis",
 		"dc": 15,
 		"description": "<p><strong>Curative.</strong> Equivalent to a @UUID[Compendium.shadowdark.magic-items.Item.jucTGEjsqJ1znHdf]{Potion of Healing}</p><p></p>",
 		"group": "Herbal Remedy",

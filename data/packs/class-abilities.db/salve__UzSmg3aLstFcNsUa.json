@@ -7,7 +7,7 @@
 	"img": "icons/tools/navigation/map-chart-tan.webp",
 	"name": "Salve",
 	"system": {
-		"ability": "int",
+		"ability": "wis",
 		"dc": 11,
 		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.m857P6MI00wAONTp]{Salve} Heals 1 HP</p>",
 		"group": "Herbal Remedy",

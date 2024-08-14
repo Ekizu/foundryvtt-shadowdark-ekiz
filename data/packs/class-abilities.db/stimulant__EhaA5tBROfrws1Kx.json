@@ -7,7 +7,7 @@
 	"img": "icons/tools/navigation/map-chart-tan.webp",
 	"name": "Stimulant",
 	"system": {
-		"ability": "int",
+		"ability": "wis",
 		"dc": 12,
 		"description": "<p>@UUID[Compendium.shadowdark.gear.Item.dBQr9YPyhvwyPm0g]{Stimulant} You can't be surprised for 10 rounds</p><p></p>",
 		"group": "Herbal Remedy",
