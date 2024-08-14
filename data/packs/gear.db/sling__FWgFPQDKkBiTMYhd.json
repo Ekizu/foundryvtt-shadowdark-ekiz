@@ -22,8 +22,8 @@
 		"canBeEquipped": true,
 		"cost": {
 			"cp": 0,
-			"gp": 5,
-			"sp": 0
+			"gp": 0,
+			"sp": 5
 		},
 		"damage": {
 			"numDice": 1,
