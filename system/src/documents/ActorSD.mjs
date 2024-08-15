@@ -415,14 +415,12 @@ export default class ActorSD extends Actor {
 		);
 	}
 
-
 	async buildWeaponDisplay(options) {
 		return await renderTemplate(
 			"systems/shadowdark/templates/partials/weapon-attack.hbs",
 			options
 		);
 	}
-
 
 	async buildWeaponDisplays(itemId) {
 		const item = this.getEmbeddedDocument("Item", itemId);
