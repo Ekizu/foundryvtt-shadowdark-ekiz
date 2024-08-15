@@ -210,7 +210,12 @@ export default class ItemSD extends Item {
 
 		if (data.ammo) {
 			if (data.ammo.system.quantity > 0) {
-				data.ammo.system.quantity -= 1;
+				data.actor.updateEmbeddedDocuments("Item", [
+					{
+						"_id": data.ammo._id,
+						"system.quantity": data.ammo.system.quantity - 1,
+					},
+				]);
 				console.log('Item: %s: decreased quantity for ammunition %s, remaining quantity: %d',
 				            this.name,
 							data.ammo.name,
