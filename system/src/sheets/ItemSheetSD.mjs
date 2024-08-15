@@ -342,6 +342,7 @@ export default class ItemSheetSD extends ItemSheet {
 				"Wand",
 				"Weapon",
 				"Wound",
+				"Ammunition",
 			].includes(item.type),
 
 			effects: (
