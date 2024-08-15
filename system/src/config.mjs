@@ -565,4 +565,11 @@ SHADOWDARK.WEAPON_TYPES = {
 	ranged: "SHADOWDARK.weapon.type.ranged",
 };
 
+SHADOWDARK.AMMUNITION_TYPES = {
+	none: "SHADOWDARK.ammunition.type.none",
+	crossbow: "SHADOWDARK.ammunition.type.crossbow",
+	bow: "SHADOWDARK.ammunition.type.bow",
+	sling: "SHADOWDARK.ammunition.type.sling",
+};
+
 export default SHADOWDARK;

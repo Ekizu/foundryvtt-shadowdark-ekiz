@@ -205,7 +205,26 @@ export default class ItemSD extends Item {
 	async rollItem(parts, data, options={}) {
 		options.dialogTemplate =  "systems/shadowdark/templates/dialog/roll-item-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/item-card.hbs";
-		await CONFIG.DiceSD.RollDialog(parts, data, options);
+
+		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
+
+		if (data.ammo) {
+			if (data.ammo.system.quantity > 0) {
+				data.ammo.system.quantity -= 1;
+				console.log('Item: %s: decreased quantity for ammunition %s, remaining quantity: %d',
+				            this.name,
+							data.ammo.name,
+							data.ammo.system.quantity);
+			}
+			else {
+				console.log('Item %s: ammunition %s has already 0 quantity',
+							this.name,
+							data.ammo.name);
+			}
+		}
+		else {
+			console.log('Item %s: has use no ammunition object', this.name);
+		}
 	}
 
 	async rollSpell(parts, data, options={}) {
@@ -345,6 +364,14 @@ export default class ItemSD extends Item {
 		}
 
 		return ranges.join(", ");
+	}
+
+	useAmmo() {
+		return this.system.ammunitionType !== "none";
+	}
+
+	getAmmoType() {
+		return this.system.ammunitionType;
 	}
 
 	/* ---------- Effect Methods ---------- */

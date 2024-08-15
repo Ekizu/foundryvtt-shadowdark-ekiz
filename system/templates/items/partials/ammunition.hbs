@@ -1,0 +1,18 @@
+<div class="SD-box">
+	<div class="header light">
+		<label>{{localize 'SHADOWDARK.inventory.label.ammunitions'}}</label>
+		<span></span>
+	</div>
+	<div class="content">
+		<div class="item-grid right">
+			<h3>{{localize 'SHADOWDARK.item.ammunition_type'}}</h3>
+			<select name="system.type">
+				{{selectOptions
+					config.AMMUNITION_TYPES
+					selected=system.type
+					localize=false
+				}}
+			</select>
+		</div>
+	</div>
+</div>

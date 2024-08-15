@@ -24,6 +24,15 @@
 			}}
 		</select>
 
+		<h3>{{localize 'SHADOWDARK.item.ammunition_type'}}</h3>
+		<select name="system.ammunitionType">
+			{{selectOptions
+				config.AMMUNITION_TYPES
+				selected=system.AmmunitionType
+				localize=false
+			}}
+		</select>
+
 		<h3>{{localize 'SHADOWDARK.item.weapon_range'}}</h3>
 		<select name="system.range">
 			{{selectOptions

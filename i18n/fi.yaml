@@ -347,6 +347,8 @@ SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä
 SHADOWDARK.inventory.item.light_seconds_remaining: Alle minuutti jäljellä
 SHADOWDARK.inventory.item.light_used: (used)
 
+SHADOWDARK.inventory.label.ammunitions: Ammunitions
+
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
@@ -503,6 +505,9 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 2K
 SHADOWDARK.item.weapon_damage.twoHanded: Vahinkoa kahdella kädellä
 SHADOWDARK.item.weapon_range: Kantama
 SHADOWDARK.item.weapon_type: Aseen tyyppi
+
+SHADOWDARK.item.ammunition_type: Ammunition Type
+
 SHADOWDARK.item.weapon.base_weapon.bastard_sword: Äpärämiekka
 SHADOWDARK.item.weapon.base_weapon.club: Nuija
 SHADOWDARK.item.weapon.base_weapon.crossbow: Varsijousi
@@ -789,4 +794,10 @@ SHADOWDARK.weapon.properties.thrown: Heitettävä
 SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
+
+SHADOWDARK.ammunition.type.none: None
+SHADOWDARK.ammunition.type.crossbow: Crossbow
+SHADOWDARK.ammunition.type.bow: Bow
+SHADOWDARK.ammunition.type.sling: Sling
+
 SHADOWDARK.weapon.type.ranged: Kantama-ase

@@ -150,6 +150,7 @@
 	"Item": {
 		"types": [
 			"Ancestry",
+			"Ammunition",
 			"Armor",
 			"Background",
 			"Basic",
@@ -232,6 +233,9 @@
 				"type": "",
 				"abilitiesMalus": 1,
 				"slotsUsed": 1
+			},
+			"ammunition": {
+				"type": "none"
 			}
 		},
 		"Ancestry": {
@@ -242,6 +246,13 @@
 			"talents": [],
 			"talentChoiceCount": 1,
 			"nameTable": ""
+		},
+		"Ammunition": {
+			"templates": [
+				"common",
+				"physical",
+				"ammunition"
+			]
 		},
 		"Armor": {
 			"templates": [
@@ -471,7 +482,8 @@
 			"properties": [],
 			"range": "close",
 			"type": "melee",
-			"weaponMastery": false
+			"weaponMastery": false,
+			"ammunitionType": "none"
 		},
 		"Wound": {
 			"templates": [

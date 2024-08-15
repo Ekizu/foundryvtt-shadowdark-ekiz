@@ -1150,6 +1150,7 @@ export default class ActorSD extends Actor {
 			item: item,
 			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
 			actor: this,
+			ammo: null
 		};
 
 		const bonuses = this.system.bonuses;
@@ -1191,6 +1192,17 @@ export default class ActorSD extends Actor {
 
 		// Talents & Ability modifiers
 		if (this.type === "Player") {
+
+			if (item.useAmmo())
+			{
+				console.log('Item %s: use ammunition', item.name);
+
+				const ammoType = item.getAmmoType();
+				const ammo = this.items.find(i => {
+					return i.type === "Ammunition" && i.system.type === ammoType;
+				});
+				data.ammo = ammo;
+			}
 
 			// Check to see if we have any extra dice that need to be added to
 			// the damage rolls due to effects

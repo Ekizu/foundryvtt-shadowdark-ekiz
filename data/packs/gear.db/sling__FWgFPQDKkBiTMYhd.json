@@ -50,7 +50,8 @@
 		},
 		"stashed": false,
 		"type": "ranged",
-		"weaponMastery": false
+		"weaponMastery": false,
+		"ammunitionType": "sling"
 	},
 	"type": "Weapon"
 }

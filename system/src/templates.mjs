@@ -57,6 +57,7 @@ export default function() {
 		"systems/shadowdark/templates/items/partials/talent.hbs",
 		"systems/shadowdark/templates/items/partials/weapon.hbs",
 		"systems/shadowdark/templates/items/partials/wound.hbs",
+		"systems/shadowdark/templates/items/partials/ammunition.hbs",
 		"systems/shadowdark/templates/items/tabs/description.hbs",
 		"systems/shadowdark/templates/items/tabs/details.hbs",
 		"systems/shadowdark/templates/items/tabs/effects.hbs",

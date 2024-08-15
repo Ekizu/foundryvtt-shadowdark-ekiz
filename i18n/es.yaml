@@ -347,6 +347,8 @@ SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} Minutos restantes"
 SHADOWDARK.inventory.item.light_seconds_remaining: Menos de 1 minuto restante
 SHADOWDARK.inventory.item.light_used: (used)
 
+SHADOWDARK.inventory.label.ammunitions: Ammunitions
+
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
@@ -503,6 +505,9 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 2M
 SHADOWDARK.item.weapon_damage.twoHanded: Daño 2M
 SHADOWDARK.item.weapon_range: Rango
 SHADOWDARK.item.weapon_type: Tipo
+
+SHADOWDARK.item.ammunition_type: Ammunition Type
+
 SHADOWDARK.item.weapon.base_weapon.bastard_sword: Espada bastarda
 SHADOWDARK.item.weapon.base_weapon.club: Garrote
 SHADOWDARK.item.weapon.base_weapon.crossbow: Ballesta
@@ -789,4 +794,10 @@ SHADOWDARK.weapon.properties.thrown: Arrojadiza
 SHADOWDARK.weapon.properties.two_handed: A dos manos
 SHADOWDARK.weapon.properties.versatile: Versátil
 SHADOWDARK.weapon.type.melee: Cuerpo a Cuerpo
+
+SHADOWDARK.ammunition.type.none: None
+SHADOWDARK.ammunition.type.crossbow: Crossbow
+SHADOWDARK.ammunition.type.bow: Bow
+SHADOWDARK.ammunition.type.sling: Sling
+
 SHADOWDARK.weapon.type.ranged: A distancia

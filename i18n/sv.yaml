@@ -347,6 +347,8 @@ SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuter kvar"
 SHADOWDARK.inventory.item.light_seconds_remaining: Mindre än en minut återstår
 SHADOWDARK.inventory.item.light_used: (used)
 
+SHADOWDARK.inventory.label.ammunitions: Ammunitions
+
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
@@ -503,6 +505,9 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 2H
 SHADOWDARK.item.weapon_damage.twoHanded: 2H Skada
 SHADOWDARK.item.weapon_range: Avstånd
 SHADOWDARK.item.weapon_type: Typ
+
+SHADOWDARK.item.ammunition_type: Ammunition Type
+
 SHADOWDARK.item.weapon.base_weapon.bastard_sword: Bastardsvärd
 SHADOWDARK.item.weapon.base_weapon.club: Knölpåk
 SHADOWDARK.item.weapon.base_weapon.crossbow: Armborst
@@ -789,4 +794,10 @@ SHADOWDARK.weapon.properties.thrown: Kasta
 SHADOWDARK.weapon.properties.two_handed: Två-handat
 SHADOWDARK.weapon.properties.versatile: Versatilt
 SHADOWDARK.weapon.type.melee: Närstrid
+
+SHADOWDARK.ammunition.type.none: None
+SHADOWDARK.ammunition.type.crossbow: Crossbow
+SHADOWDARK.ammunition.type.bow: Bow
+SHADOWDARK.ammunition.type.sling: Sling
+
 SHADOWDARK.weapon.type.ranged: Avståndsstrid

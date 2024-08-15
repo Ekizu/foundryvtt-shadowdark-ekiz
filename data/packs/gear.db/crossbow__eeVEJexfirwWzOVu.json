@@ -53,7 +53,8 @@
 		},
 		"stashed": false,
 		"type": "ranged",
-		"weaponMastery": false
+		"weaponMastery": false,
+		"ammunitionType": "crossbow"
 	},
 	"type": "Weapon"
 }

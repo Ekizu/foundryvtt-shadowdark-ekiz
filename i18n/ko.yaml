@@ -347,6 +347,8 @@ SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} 분 남았습니다"
 SHADOWDARK.inventory.item.light_seconds_remaining: 1분 미만 남았습니다
 SHADOWDARK.inventory.item.light_used: (used)
 
+SHADOWDARK.inventory.label.ammunitions: Ammunitions
+
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
@@ -503,6 +505,9 @@ SHADOWDARK.item.weapon_damage.twoHanded_short: 두손
 SHADOWDARK.item.weapon_damage.twoHanded: 두손 피해
 SHADOWDARK.item.weapon_range: 범위
 SHADOWDARK.item.weapon_type: 유형
+
+SHADOWDARK.item.ammunition_type: Ammunition Type
+
 SHADOWDARK.item.weapon.base_weapon.bastard_sword: 바스타드 소드
 SHADOWDARK.item.weapon.base_weapon.club: 몽둥이
 SHADOWDARK.item.weapon.base_weapon.crossbow: 쇠뇌
@@ -789,4 +794,10 @@ SHADOWDARK.weapon.properties.thrown: 투척
 SHADOWDARK.weapon.properties.two_handed: 양손
 SHADOWDARK.weapon.properties.versatile: 다용도
 SHADOWDARK.weapon.type.melee: 근접
+
+SHADOWDARK.ammunition.type.none: None
+SHADOWDARK.ammunition.type.crossbow: Crossbow
+SHADOWDARK.ammunition.type.bow: Bow
+SHADOWDARK.ammunition.type.sling: Sling
+
 SHADOWDARK.weapon.type.ranged: 원거리

@@ -76,6 +76,10 @@
 			{{> items/partials/wound }}
 		{{/ifEq}}
 
+		{{#ifEq item.type "Ammunition"}}
+			{{> items/partials/ammunition }}
+		{{/ifEq}}
+
 		{{#if hasCost}}
 			{{> items/partials/cost }}
 		{{/if}}
