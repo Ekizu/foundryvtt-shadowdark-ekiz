@@ -799,10 +799,10 @@ SHADOWDARK.ammunition.type.none: None
 SHADOWDARK.ammunition.type.crossbow: Crossbow
 SHADOWDARK.ammunition.type.bow: Bow
 SHADOWDARK.ammunition.type.sling: Sling
-SHADOWDARK.ammunition.type.magic_ammo_1: Magic Ammunition 1
-SHADOWDARK.ammunition.type.magic_ammo_2: Magic Ammunition 2
-SHADOWDARK.ammunition.type.magic_ammo_3: Magic Ammunition 3
-SHADOWDARK.ammunition.type.magic_ammo_4: Magic Ammunition 4
-SHADOWDARK.ammunition.type.magic_ammo_5: Magic Ammunition 5
+SHADOWDARK.ammunition.type.ammo_1: Ammunition 1
+SHADOWDARK.ammunition.type.ammo_2: Ammunition 2
+SHADOWDARK.ammunition.type.ammo_3: Ammunition 3
+SHADOWDARK.ammunition.type.ammo_4: Ammunition 4
+SHADOWDARK.ammunition.type.ammo_5: Ammunition 5
 
 SHADOWDARK.weapon.type.ranged: Avståndsstrid

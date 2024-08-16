@@ -209,6 +209,7 @@ export default class ItemSD extends Item {
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		if (data.useAmmo) {
+
 			const cardData = {
 				actor: data.actor,
 				item: data.ammo,
