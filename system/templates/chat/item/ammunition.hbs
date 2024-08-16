@@ -10,7 +10,16 @@
 
 	<div class="card-content">
 		<h3 class="light-source-name">
-			1 {{item.name}} shooted. Remaining {{item.name}}: {{remainingAmmo}}.
+			1 {{item.name}} shooted.
 		</h3>
+		{{#ifCond remainingAmmo '>' 5}}
+			<p>
+				Remaining {{item.name}}: {{remainingAmmo}}.
+			</p>
+		{{else}}
+			<p>
+				<span style="color:red">Remaining {{item.name}}: {{remainingAmmo}}.</span>
+			</p>
+		{{/if}}
 	</div>
 </div>

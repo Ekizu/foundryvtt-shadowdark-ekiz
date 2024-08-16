@@ -570,6 +570,11 @@ SHADOWDARK.AMMUNITION_TYPES = {
 	crossbow: "SHADOWDARK.ammunition.type.crossbow",
 	bow: "SHADOWDARK.ammunition.type.bow",
 	sling: "SHADOWDARK.ammunition.type.sling",
+	magic_ammo_1: "SHADOWDARK.ammunition.type.magic_ammo_1",
+	magic_ammo_2: "SHADOWDARK.ammunition.type.magic_ammo_2",
+	magic_ammo_3: "SHADOWDARK.ammunition.type.magic_ammo_3",
+	magic_ammo_4: "SHADOWDARK.ammunition.type.magic_ammo_4",
+	magic_ammo_5: "SHADOWDARK.ammunition.type.magic_ammo_5",
 };
 
 export default SHADOWDARK;
