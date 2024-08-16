@@ -1148,6 +1148,7 @@ export default class ActorSD extends Actor {
 			item: item,
 			rollType: (item.isWeapon()) ? item.system.baseWeapon.slugify() : item.name.slugify(),
 			actor: this,
+			useAmmo: false,
 			ammo: null
 		};
 
@@ -1197,8 +1198,9 @@ export default class ActorSD extends Actor {
 
 				const ammoType = item.getAmmoType();
 				const ammo = this.items.find(i => {
-					return i.type === "Ammunition" && i.system.type === ammoType;
+					return i.type === "Ammunition" && i.system.type === ammoType && i.system.quantity > 0;
 				});
+				data.useAmmo = true;
 				data.ammo = ammo;
 			}
 

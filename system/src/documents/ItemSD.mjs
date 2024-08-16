@@ -208,14 +208,13 @@ export default class ItemSD extends Item {
 
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
-		if (data.ammo) {
-
+		if (data.useAmmo) {
 			const cardData = {
 				actor: data.actor,
 				item: data.ammo,
 			};
 
-			if (data.ammo.system.quantity > 0) {
+			if (data.ammo && data.ammo.system.quantity > 0) {
 				const remainingAmmo = data.ammo.system.quantity - 1;
 				data.actor.updateEmbeddedDocuments("Item", [
 					{
@@ -251,7 +250,7 @@ export default class ItemSD extends Item {
 			}
 		}
 		else {
-			console.log('rollItem(): Item %s: has use no ammunition object', this.name);
+			console.log('rollItem(): Item %s: do not use ammo', this.name);
 		}
 	}
 
