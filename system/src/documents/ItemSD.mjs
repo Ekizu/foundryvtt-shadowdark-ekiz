@@ -216,19 +216,35 @@ export default class ItemSD extends Item {
 						"system.quantity": data.ammo.system.quantity - 1,
 					},
 				]);
-				console.log('Item: %s: decreased quantity for ammunition %s, remaining quantity: %d',
+
+				const cardData = {
+					actor: data.actor,
+					item: data.ammo,
+				};
+
+				let template = "systems/shadowdark/templates/chat/item/ammunition.hbs";
+
+				const content = await renderTemplate(template, cardData);
+
+				await ChatMessage.create({
+					content,
+					speaker: ChatMessage.getSpeaker(),
+					rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+				});
+
+
+				console.log('rollItem(): Item: %s: decreased quantity for ammunition %s',
 				            this.name,
-							data.ammo.name,
-							data.ammo.system.quantity);
+							data.ammo.name);
 			}
 			else {
-				console.log('Item %s: ammunition %s has already 0 quantity',
+				console.log('rollItem(): Item %s: ammunition %s has already 0 quantity',
 							this.name,
 							data.ammo.name);
 			}
 		}
 		else {
-			console.log('Item %s: has use no ammunition object', this.name);
+			console.log('rollItem(): Item %s: has use no ammunition object', this.name);
 		}
 	}
 
