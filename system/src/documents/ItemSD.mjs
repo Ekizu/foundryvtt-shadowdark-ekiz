@@ -237,6 +237,7 @@ export default class ItemSD extends Item {
 							data.ammo.name);
 			}
 			else {
+				cardData.item = this;
 				let template = "systems/shadowdark/templates/chat/item/no-ammunition.hbs";
 				const content = await renderTemplate(template, cardData);
 				await ChatMessage.create({
@@ -244,9 +245,8 @@ export default class ItemSD extends Item {
 					speaker: ChatMessage.getSpeaker(),
 					rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 				});
-				console.log('rollItem(): Item %s: ammunition %s has already 0 quantity',
-							this.name,
-							data.ammo.name);
+				console.log('rollItem(): Item %s: no ammunition available',
+							this.name);
 			}
 		}
 		else {
