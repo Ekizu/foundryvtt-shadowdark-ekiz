@@ -224,7 +224,7 @@ export default class ItemSD extends Item {
 					},
 				]);
 
-				data.remainingAmmo = remainingAmmo;
+				cardData.remainingAmmo = remainingAmmo;
 				let template = "systems/shadowdark/templates/chat/item/ammunition.hbs";
 				const content = await renderTemplate(template, cardData);
 				await ChatMessage.create({
