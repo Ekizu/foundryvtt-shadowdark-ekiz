@@ -1009,6 +1009,9 @@ export default class PlayerSheetSD extends ActorSheetSD {
 			slots.gems = Math.ceil(totalGems / CONFIG.SHADOWDARK.DEFAULTS.GEMS_PER_SLOT);
 		}
 
+		slots.gear = this._roundToOneDecimal(slots.gear);
+		slots.treasure = this._roundToOneDecimal(slots.treasure);
+
 		// calculate total slots
 		slots.total = slots.gear + slots.treasure + slots.coins + slots.gems + slots.wounds;
 
