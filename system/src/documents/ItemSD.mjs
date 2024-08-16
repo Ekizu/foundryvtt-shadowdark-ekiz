@@ -209,35 +209,42 @@ export default class ItemSD extends Item {
 		const roll = await CONFIG.DiceSD.RollDialog(parts, data, options);
 
 		if (data.ammo) {
+
+			const cardData = {
+				actor: data.actor,
+				item: data.ammo,
+			};
+
 			if (data.ammo.system.quantity > 0) {
+				const remainingAmmo = data.ammo.system.quantity - 1;
 				data.actor.updateEmbeddedDocuments("Item", [
 					{
 						"_id": data.ammo._id,
-						"system.quantity": data.ammo.system.quantity - 1,
+						"system.quantity": remainingAmmo,
 					},
 				]);
 
-				const cardData = {
-					actor: data.actor,
-					item: data.ammo,
-				};
-
+				data.remainingAmmo = remainingAmmo;
 				let template = "systems/shadowdark/templates/chat/item/ammunition.hbs";
-
 				const content = await renderTemplate(template, cardData);
-
 				await ChatMessage.create({
 					content,
 					speaker: ChatMessage.getSpeaker(),
 					rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
 				});
 
-
 				console.log('rollItem(): Item: %s: decreased quantity for ammunition %s',
 				            this.name,
 							data.ammo.name);
 			}
 			else {
+				let template = "systems/shadowdark/templates/chat/item/no-ammunition.hbs";
+				const content = await renderTemplate(template, cardData);
+				await ChatMessage.create({
+					content,
+					speaker: ChatMessage.getSpeaker(),
+					rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+				});
 				console.log('rollItem(): Item %s: ammunition %s has already 0 quantity',
 							this.name,
 							data.ammo.name);
