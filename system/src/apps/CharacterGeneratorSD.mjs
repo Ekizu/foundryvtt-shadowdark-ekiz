@@ -364,7 +364,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 				this.formData.actor.system.abilities[key].base = await this._roll("3d6");
 			}
 			this._calculateModifiers();
-			const message = `<h2><b>Charactacter Generator:</b></h2><h3>Rolled stats:</h3><p><b>STR</b>: ${this.formData.actor.system.abilities[str].base}</p><p><b>DEX</b>: ${this.formData.actor.system.abilities[dex].base}</p><p><b>CON</b>: ${this.formData.actor.system.abilities[con].base}</p><p><b>INT</b>: ${this.formData.actor.system.abilities[int].base}</p><p><b>WIS</b>: ${this.formData.actor.system.abilities[wis].base}</p><p><b>CHA</b>: ${this.formData.actor.system.abilities[cha].base}</p>`;
+			const message = `<h2><b>Charactacter Generator:</b></h2><h3>Rolled stats:</h3><p><b>STR</b>: ${this.formData.actor.system.abilities["str"].base}</p><p><b>DEX</b>: ${this.formData.actor.system.abilities["dex"].base}</p><p><b>CON</b>: ${this.formData.actor.system.abilities["con"].base}</p><p><b>INT</b>: ${this.formData.actor.system.abilities["int"].base}</p><p><b>WIS</b>: ${this.formData.actor.system.abilities["wis"].base}</p><p><b>CHA</b>: ${this.formData.actor.system.abilities["cha"].base}</p>`;
 			await ChatMessage.create({
 				user: game.user._id,
 				message,
