@@ -382,6 +382,13 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (eventStr === "randomize-gold" || eventStr === "randomize-all") {
 			let startingGold = await this._roll("2d6")*10;
 			this.formData.actor.system.coins.gp = startingGold;
+			const message = `<h2><b>Charactacter Generator:</b></h2><h3>Rolled gold:</h3><p><b>Gold</b>: ${startingGold}</p>`;
+			await ChatMessage.create({
+				user: game.user._id,
+				content: message,
+				speaker: ChatMessage.getSpeaker(),
+				rollMode: CONST.DICE_ROLL_MODES.PUBLIC,
+			});
 		}
 
 		// Roll starting gear
