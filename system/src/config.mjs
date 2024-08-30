@@ -582,6 +582,7 @@ SHADOWDARK.WOUND_TYPES = {
 	wound: "SHADOWDARK.wound.type.wound",
 	hunger: "SHADOWDARK.wound.type.hunger",
 	exhaustion: "SHADOWDARK.wound.type.exhaustion",
+	sickness: "SHADOWDARK.wound.type.sickness",
 };
 
 export default SHADOWDARK;

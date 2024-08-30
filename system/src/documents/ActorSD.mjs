@@ -737,7 +737,7 @@ export default class ActorSD extends Actor {
 
 	async getWounds() {
 		const items = this.items.filter(
-			item => item.isWoundButHunger()
+			item => item.isWoundHealableBySleep()
 		).sort((a, b) => {
 			const a_name = a.name.toLowerCase();
 			const b_name = b.name.toLowerCase();

@@ -800,6 +800,7 @@ SHADOWDARK.wound.type.basic: Basic
 SHADOWDARK.wound.type.wound: Wound
 SHADOWDARK.wound.type.hunger: Hunger
 SHADOWDARK.wound.type.exhaustion: Exhaustion
+SHADOWDARK.wound.type.sickness: Sickness
 
 SHADOWDARK.ammunition.type.none: None
 SHADOWDARK.ammunition.type.crossbow: Crossbow

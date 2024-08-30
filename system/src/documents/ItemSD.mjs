@@ -330,8 +330,9 @@ export default class ItemSD extends Item {
 		return this.type === "Wound";
 	}
 
-	isWoundButHunger() {
-		return this.type === "Wound" && this.system.type !== "hunger";
+	isWoundHealableBySleep() {
+		// valid wounds type: basic, wound, exhaustion
+		return this.type === "Wound" && this.system.type !== "hunger" && this.system.type !== "sickness";
 	}
 
 	isFinesseWeapon() {
