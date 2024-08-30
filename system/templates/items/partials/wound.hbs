@@ -17,6 +17,14 @@
 				name="system.slotsUsed"
 				placeholder="1"
 			}}
+			<h3>{{localize 'SHADOWDARK.item.wound_type'}}</h3>
+			<select name="system.type">
+				{{selectOptions
+					config.WOUND_TYPES
+					selected=system.type
+					localize=false
+				}}
+			</select>
 		</div>
 	</div>
 </div>

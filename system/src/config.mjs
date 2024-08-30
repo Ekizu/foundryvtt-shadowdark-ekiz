@@ -577,4 +577,11 @@ SHADOWDARK.AMMUNITION_TYPES = {
 	ammo_5: "SHADOWDARK.ammunition.type.ammo_5",
 };
 
+SHADOWDARK.WOUND_TYPES = {
+	basic: "SHADOWDARK.wound.type.basic",
+	wound: "SHADOWDARK.wound.type.wound",
+	hunger: "SHADOWDARK.wound.type.hunger",
+	exhaustion: "SHADOWDARK.wound.type.exhaustion",
+};
+
 export default SHADOWDARK;

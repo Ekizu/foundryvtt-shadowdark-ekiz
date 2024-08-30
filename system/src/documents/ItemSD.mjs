@@ -330,6 +330,10 @@ export default class ItemSD extends Item {
 		return this.type === "Wound";
 	}
 
+	isWoundButHunger() {
+		return this.type === "Wound" && this.system.type !== "Hunger";
+	}
+
 	isFinesseWeapon() {
 		return this.hasProperty("finesse");
 	}

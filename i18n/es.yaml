@@ -352,6 +352,7 @@ SHADOWDARK.inventory.label.ammunitions: Ammunitions
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
+SHADOWDARK.item.wound_type: Wound Type
 
 SHADOWDARK.inventory.label.quantity: Cant.
 SHADOWDARK.inventory.label.slots: Huecos
@@ -794,6 +795,11 @@ SHADOWDARK.weapon.properties.thrown: Arrojadiza
 SHADOWDARK.weapon.properties.two_handed: A dos manos
 SHADOWDARK.weapon.properties.versatile: Versátil
 SHADOWDARK.weapon.type.melee: Cuerpo a Cuerpo
+
+SHADOWDARK.wound.type.basic: Basic
+SHADOWDARK.wound.type.wound: Wound
+SHADOWDARK.wound.type.hunger: Hunger
+SHADOWDARK.wound.type.exhaustion: Exhaustion
 
 SHADOWDARK.ammunition.type.none: None
 SHADOWDARK.ammunition.type.crossbow: Crossbow

@@ -352,6 +352,7 @@ SHADOWDARK.inventory.label.ammunitions: Ammunitions
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
+SHADOWDARK.item.wound_type: Wound Type
 
 SHADOWDARK.inventory.label.quantity: Kpl
 SHADOWDARK.inventory.label.slots: Varusteet/Tarvikkeet
@@ -794,6 +795,11 @@ SHADOWDARK.weapon.properties.thrown: Heitettävä
 SHADOWDARK.weapon.properties.two_handed: Kaksikätinen
 SHADOWDARK.weapon.properties.versatile: Yhden tai kahden käden ase
 SHADOWDARK.weapon.type.melee: Lähitaistelu ase
+
+SHADOWDARK.wound.type.basic: Basic
+SHADOWDARK.wound.type.wound: Wound
+SHADOWDARK.wound.type.hunger: Hunger
+SHADOWDARK.wound.type.exhaustion: Exhaustion
 
 SHADOWDARK.ammunition.type.none: None
 SHADOWDARK.ammunition.type.crossbow: Crossbow

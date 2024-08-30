@@ -352,6 +352,7 @@ SHADOWDARK.inventory.label.ammunitions: Ammunitions
 SHADOWDARK.inventory.label.wounds: Wounds
 SHADOWDARK.item.wound_malus: Abilities Malus
 SHADOWDARK.item.wound_slots_used: Slots Used
+SHADOWDARK.item.wound_type: Wound Type
 
 SHADOWDARK.inventory.label.quantity: 수량
 SHADOWDARK.inventory.label.slots: 슬롯
@@ -794,6 +795,11 @@ SHADOWDARK.weapon.properties.thrown: 투척
 SHADOWDARK.weapon.properties.two_handed: 양손
 SHADOWDARK.weapon.properties.versatile: 다용도
 SHADOWDARK.weapon.type.melee: 근접
+
+SHADOWDARK.wound.type.basic: Basic
+SHADOWDARK.wound.type.wound: Wound
+SHADOWDARK.wound.type.hunger: Hunger
+SHADOWDARK.wound.type.exhaustion: Exhaustion
 
 SHADOWDARK.ammunition.type.none: None
 SHADOWDARK.ammunition.type.crossbow: Crossbow
