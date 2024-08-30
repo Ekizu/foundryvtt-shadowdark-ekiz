@@ -1,30 +1,32 @@
-<div class="SD-box">
-	<div class="header light">
-		<label>{{localize 'SHADOWDARK.inventory.label.wounds'}}</label>
-		<span></span>
-	</div>
-	<div class="content">
-		<div class="item-grid">
-			<h3>{{localize 'SHADOWDARK.item.wound_malus'}}</h3>
-			{{numberInput
-				item.system.abilitiesMalus
-				name="system.abilitiesMalus"
-				placeholder="1"
-			}}
-			<h3>{{localize 'SHADOWDARK.item.wound_slots_used'}}</h3>
-			{{numberInput
-				item.system.slotsUsed
-				name="system.slotsUsed"
-				placeholder="1"
-			}}
-			<h3>{{localize 'SHADOWDARK.item.wound_type'}}</h3>
-			<select name="system.type">
-				{{selectOptions
-					config.WOUND_TYPES
-					selected=system.type
-					localize=false
+<div class="grid-colspan-3 grid-1-columns">
+	<div class="SD-box">
+		<div class="header light">
+			<label>{{localize 'SHADOWDARK.inventory.label.wounds'}}</label>
+			<span></span>
+		</div>
+		<div class="content">
+			<div class="item-grid">
+				<h3>{{localize 'SHADOWDARK.item.wound_malus'}}</h3>
+				{{numberInput
+					item.system.abilitiesMalus
+					name="system.abilitiesMalus"
+					placeholder="1"
 				}}
-			</select>
+				<h3>{{localize 'SHADOWDARK.item.wound_slots_used'}}</h3>
+				{{numberInput
+					item.system.slotsUsed
+					name="system.slotsUsed"
+					placeholder="1"
+				}}
+				<h3>{{localize 'SHADOWDARK.item.wound_type'}}</h3>
+				<select name="system.type">
+					{{selectOptions
+						config.WOUND_TYPES
+						selected=system.type
+						localize=false
+					}}
+				</select>
+			</div>
 		</div>
 	</div>
 </div>
