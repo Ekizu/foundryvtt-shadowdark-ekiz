@@ -212,6 +212,7 @@ export default class ActorSheetSD extends ActorSheet {
 		if (wounds.length > 0)
 		{
 			const woundItemId = wounds[0]._id;
+			console.log(`Wound to delete: ${wounds[0].name}, type: ${wounds[0].system.type}`);
 			await this.actor.deleteEmbeddedDocuments(
 				"Item",
 				[woundItemId]
