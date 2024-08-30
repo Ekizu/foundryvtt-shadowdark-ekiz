@@ -10,7 +10,7 @@
 		"class": [
 			"Compendium.shadowdark.classes.Item.oZWzXx1WRLg286zD"
 		],
-		"description": "<p>A creature you touch regains 1d4 hit points on your turn for the duration. This spell also regrows lost body parts.</p>",
+		"description": "<p>A creature you touch regains 1d4 hit points on your turn for the duration. This spell also regrows lost body parts and heal wounds.</p>",
 		"duration": {
 			"type": "focus",
 			"value": -1
