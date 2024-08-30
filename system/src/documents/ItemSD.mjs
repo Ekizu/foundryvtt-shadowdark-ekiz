@@ -331,7 +331,7 @@ export default class ItemSD extends Item {
 	}
 
 	isWoundButHunger() {
-		return this.type === "Wound" && this.system.type !== "Hunger";
+		return this.type === "Wound" && this.system.type !== "hunger";
 	}
 
 	isFinesseWeapon() {

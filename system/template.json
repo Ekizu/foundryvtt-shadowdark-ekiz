@@ -230,7 +230,7 @@
 				"stashed": false
 			},
 			"hindrance": {
-				"type": "Basic",
+				"type": "basic",
 				"abilitiesMalus": 1,
 				"slotsUsed": 1
 			},

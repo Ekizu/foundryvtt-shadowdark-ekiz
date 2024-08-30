@@ -7,7 +7,7 @@
 	"img": "icons/skills/wounds/anatomy-organ-heart-red.webp",
 	"name": "Basic Wound",
 	"system": {
-		"type": "Basic",
+		"type": "basic",
 		"description": "<p>A wound that hinder the body and the mind.</p>",
 		"source": {
 			"title": "ekiz"
