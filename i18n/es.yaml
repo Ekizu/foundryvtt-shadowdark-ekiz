@@ -26,6 +26,10 @@ SHADOWDARK.alignment.black_white: Black White
 SHADOWDARK.alignment.black_blue: Black Blue
 SHADOWDARK.alignment.black_red: Black Red
 SHADOWDARK.alignment.black_green: Black Green
+SHADOWDARK.alignment.red_white: Red White
+SHADOWDARK.alignment.red_blue: Red Blue
+SHADOWDARK.alignment.red_black: Red Black
+SHADOWDARK.alignment.red_green: Red Green
 SHADOWDARK.alignment.green_white: Green White
 SHADOWDARK.alignment.green_blue: Green Blue
 SHADOWDARK.alignment.green_black: Green Black
