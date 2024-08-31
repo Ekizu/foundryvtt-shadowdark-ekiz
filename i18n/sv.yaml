@@ -13,6 +13,24 @@ SHADOWDARK.ability_wisdom: Vishet
 SHADOWDARK.alignment.chaotic: Kaotisk
 SHADOWDARK.alignment.lawful: Laglydig
 SHADOWDARK.alignment.neutral: Neutral
+
+SHADOWDARK.alignment.white_blue: White Blue
+SHADOWDARK.alignment.white_black: White Black
+SHADOWDARK.alignment.white_red: White Red
+SHADOWDARK.alignment.white_green: White Green
+SHADOWDARK.alignment.blue_white: Blue White
+SHADOWDARK.alignment.blue_black: Blue Black
+SHADOWDARK.alignment.blue_red: Blue Red
+SHADOWDARK.alignment.blue_green: Blue Green
+SHADOWDARK.alignment.black_white: Black White
+SHADOWDARK.alignment.black_blue: Black Blue
+SHADOWDARK.alignment.black_red: Black Red
+SHADOWDARK.alignment.black_green: Black Green
+SHADOWDARK.alignment.green_white: Green White
+SHADOWDARK.alignment.green_blue: Green Blue
+SHADOWDARK.alignment.green_black: Green Black
+SHADOWDARK.alignment.green_red: Green Red
+
 SHADOWDARK.ancestry.choice_count: Choice Count
 SHADOWDARK.ancestry.choice: Choice
 SHADOWDARK.ancestry.fixed: Fixed
