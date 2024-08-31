@@ -140,6 +140,7 @@ SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
 SHADOWDARK.skills.skill: Skill
 SHADOWDARK.skills.knowledge: Knowledge
+SHADOWDARK.skills.career: Career
 
 SHADOWDARK.chat_card.button.attack: Jet d'Attaque
 SHADOWDARK.chat_card.button.cast_spell: Lancement de sort
@@ -542,6 +543,9 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.rarity.common: Commune
 SHADOWDARK.language.rarity.label: Rareté
 SHADOWDARK.language.rarity.rare: Rare
+
+SHADOWDARK.language.rarity.regional: Regional
+
 SHADOWDARK.language.reptilian: Reptilien
 SHADOWDARK.language.sylvan: Sylvestre
 SHADOWDARK.language.thanian: Thanien

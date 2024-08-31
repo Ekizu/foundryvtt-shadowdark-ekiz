@@ -140,6 +140,7 @@ SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
 SHADOWDARK.skills.skill: Skill
 SHADOWDARK.skills.knowledge: Knowledge
+SHADOWDARK.skills.career: Career
 
 SHADOWDARK.chat_card.button.attack: Rulla attack
 SHADOWDARK.chat_card.button.cast_spell: Kasta besvärjelse
@@ -542,6 +543,9 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.rarity.common: Vanlig
 SHADOWDARK.language.rarity.label: Sällsynthet
 SHADOWDARK.language.rarity.rare: Sällsynt
+
+SHADOWDARK.language.rarity.regional: Regional
+
 SHADOWDARK.language.reptilian: Reptiliska
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thaniska

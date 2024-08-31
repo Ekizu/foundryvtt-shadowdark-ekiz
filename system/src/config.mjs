@@ -57,6 +57,7 @@ SHADOWDARK.SKILL_TYPES = {
 	generic: "SHADOWDARK.skills.generic",
 	skill: "SHADOWDARK.skills.skill",
 	knowledge: "SHADOWDARK.skills.knowledge",
+	career: "SHADOWDARK.skills.career",
 };
 
 SHADOWDARK.DEFAULTS = {
@@ -96,6 +97,7 @@ SHADOWDARK.DEFAULTS = {
 SHADOWDARK.LANGUAGE_RARITY = {
 	common: "SHADOWDARK.language.rarity.common",
 	rare: "SHADOWDARK.language.rarity.rare",
+	regional: "SHADOWDARK.language.rarity.regional",
 };
 
 SHADOWDARK.LIGHT_SETTING_NAMES = {

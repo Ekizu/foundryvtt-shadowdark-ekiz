@@ -140,6 +140,7 @@ SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
 SHADOWDARK.skills.skill: Skill
 SHADOWDARK.skills.knowledge: Knowledge
+SHADOWDARK.skills.career: Career
 
 SHADOWDARK.chat_card.button.attack: 명중 굴림
 SHADOWDARK.chat_card.button.cast_spell: 주문 시전
@@ -542,6 +543,9 @@ SHADOWDARK.language.primordial: 원시어 Primordial
 SHADOWDARK.language.rarity.common: 평범
 SHADOWDARK.language.rarity.label: 희귀도
 SHADOWDARK.language.rarity.rare: 희귀
+
+SHADOWDARK.language.rarity.regional: Regional
+
 SHADOWDARK.language.reptilian: 렙틸리언어 Reptilian
 SHADOWDARK.language.sylvan: 삼림어 Sylvan
 SHADOWDARK.language.thanian: 타니언어 Thanian

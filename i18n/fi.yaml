@@ -140,6 +140,7 @@ SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
 SHADOWDARK.skills.skill: Skill
 SHADOWDARK.skills.knowledge: Knowledge
+SHADOWDARK.skills.career: Career
 
 SHADOWDARK.chat_card.button.attack: Heitä hyökkäysheitto
 SHADOWDARK.chat_card.button.cast_spell: Loihdi loitsu
@@ -542,6 +543,9 @@ SHADOWDARK.language.primordial: Alkukieli
 SHADOWDARK.language.rarity.common: Yleinen
 SHADOWDARK.language.rarity.label: Harvinaisuus
 SHADOWDARK.language.rarity.rare: Harvinainen
+
+SHADOWDARK.language.rarity.regional: Regional
+
 SHADOWDARK.language.reptilian: Reptiliaani
 SHADOWDARK.language.sylvan: Salokieli
 SHADOWDARK.language.thanian: Petopuhe

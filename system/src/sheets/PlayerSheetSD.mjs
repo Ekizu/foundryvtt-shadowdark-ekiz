@@ -791,6 +791,10 @@ export default class PlayerSheetSD extends ActorSheetSD {
 				label: game.i18n.localize("SHADOWDARK.skills.knowledge"),
 				items: [],
 			},
+			career: {
+				label: game.i18n.localize("SHADOWDARK.skills.career"),
+				items: [],
+			},
 		};
 
 		const inventory = {

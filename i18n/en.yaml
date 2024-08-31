@@ -140,6 +140,7 @@ SHADOWDARK.skill.type.label: Skill Type
 SHADOWDARK.skills.generic: Generic
 SHADOWDARK.skills.skill: Skill
 SHADOWDARK.skills.knowledge: Knowledge
+SHADOWDARK.skills.career: Career
 
 SHADOWDARK.chat_card.button.attack: Roll Attack
 SHADOWDARK.chat_card.button.cast_spell: Cast Spell
@@ -542,6 +543,9 @@ SHADOWDARK.language.primordial: Primordial
 SHADOWDARK.language.rarity.common: Common
 SHADOWDARK.language.rarity.label: Rarity
 SHADOWDARK.language.rarity.rare: Rare
+
+SHADOWDARK.language.rarity.regional: Regional
+
 SHADOWDARK.language.reptilian: Reptilian
 SHADOWDARK.language.sylvan: Sylvan
 SHADOWDARK.language.thanian: Thanian

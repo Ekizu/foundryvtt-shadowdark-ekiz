@@ -141,7 +141,11 @@
 							{{#ifEq this.system.rarity "common"}}
 								class="tag tag_primary"
 							{{else}}
-								class="tag tag_secondary"
+								{{#ifEq this.system.rarity "rare"}}
+									class="tag tag_secondary"
+								{{else}}
+									class="tag tag_tertiary"
+								{{/ifEq}}
 							{{/ifEq}}
 							data-tooltip="{{this.system.description}}"
 						>
