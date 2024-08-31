@@ -14,6 +14,11 @@ SHADOWDARK.alignment.chaotic: Chaotisch
 SHADOWDARK.alignment.lawful: Rechtschaffen
 SHADOWDARK.alignment.neutral: Neutral
 
+SHADOWDARK.alignment.white: White
+SHADOWDARK.alignment.blue: Blue
+SHADOWDARK.alignment.black: Black
+SHADOWDARK.alignment.red: Red
+SHADOWDARK.alignment.green: Green
 SHADOWDARK.alignment.white_blue: White Blue
 SHADOWDARK.alignment.white_black: White Black
 SHADOWDARK.alignment.white_red: White Red

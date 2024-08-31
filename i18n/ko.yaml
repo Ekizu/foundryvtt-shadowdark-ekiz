@@ -14,6 +14,11 @@ SHADOWDARK.alignment.chaotic: 혼돈
 SHADOWDARK.alignment.lawful: 질서
 SHADOWDARK.alignment.neutral: 중립
 
+SHADOWDARK.alignment.white: White
+SHADOWDARK.alignment.blue: Blue
+SHADOWDARK.alignment.black: Black
+SHADOWDARK.alignment.red: Red
+SHADOWDARK.alignment.green: Green
 SHADOWDARK.alignment.white_blue: White Blue
 SHADOWDARK.alignment.white_black: White Black
 SHADOWDARK.alignment.white_red: White Red
