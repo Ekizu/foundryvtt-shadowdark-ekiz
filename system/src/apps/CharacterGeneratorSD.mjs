@@ -360,11 +360,22 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		// randomize stats
 		if (eventStr === "randomize-stats" || eventStr === "randomize-all") {
+			let oneStatAboveFourteen = false;
 			for (const key of CONFIG.SHADOWDARK.ABILITY_KEYS) {
 				this.formData.actor.system.abilities[key].base = await this._roll("3d6");
+				if (this.formData.actor.system.abilities[key].base >= 14) {
+					oneStatAboveFourteen = true;
+				}
 			}
 			this._calculateModifiers();
-			const message = `<h2><b>Charactacter Generator:</b></h2><h3>Rolled stats:</h3><p><b>STR</b>: ${this.formData.actor.system.abilities["str"].base}</p><p><b>DEX</b>: ${this.formData.actor.system.abilities["dex"].base}</p><p><b>CON</b>: ${this.formData.actor.system.abilities["con"].base}</p><p><b>INT</b>: ${this.formData.actor.system.abilities["int"].base}</p><p><b>WIS</b>: ${this.formData.actor.system.abilities["wis"].base}</p><p><b>CHA</b>: ${this.formData.actor.system.abilities["cha"].base}</p>`;
+
+			let message = "";
+			if (oneStatAboveFourteen) {
+				message = `<h2><b>Charactacter Generator:</b></h2><h3>Rolled stats <span style="color:green;font-weight:bold;">(Valid character stats)</span>:</h3><p><b>STR</b>: ${this.formData.actor.system.abilities["str"].base}</p><p><b>DEX</b>: ${this.formData.actor.system.abilities["dex"].base}</p><p><b>CON</b>: ${this.formData.actor.system.abilities["con"].base}</p><p><b>INT</b>: ${this.formData.actor.system.abilities["int"].base}</p><p><b>WIS</b>: ${this.formData.actor.system.abilities["wis"].base}</p><p><b>CHA</b>: ${this.formData.actor.system.abilities["cha"].base}</p>`;
+			} else {
+				message = `<h2><b>Charactacter Generator:</b></h2><h3>Rolled stats <span style="color:red;font-weight:bold;">(Invalid character stats)</span>:</h3><p><b>STR</b>: ${this.formData.actor.system.abilities["str"].base}</p><p><b>DEX</b>: ${this.formData.actor.system.abilities["dex"].base}</p><p><b>CON</b>: ${this.formData.actor.system.abilities["con"].base}</p><p><b>INT</b>: ${this.formData.actor.system.abilities["int"].base}</p><p><b>WIS</b>: ${this.formData.actor.system.abilities["wis"].base}</p><p><b>CHA</b>: ${this.formData.actor.system.abilities["cha"].base}</p>`;
+			}
+
 			await ChatMessage.create({
 				user: game.user._id,
 				content: message,
