@@ -1,0 +1,20 @@
+{
+	"_id": "b25DfyMUkzzVWY4eRk",
+	"_key": "!items!b25DfyMUkzzVWY4eRk",
+	"effects": [
+	],
+	"folder": "MFeFmA2ubOJxaTwm",
+	"img": "icons/skills/trades/academics-merchant-scribe.webp",
+	"name": "Experienced",
+	"system": {
+		"description": "<p><span class=\"fontstyle0\">You can choose one additional career when creating your character.</span></p>",
+		"level": 1,
+		"magicItem": false,
+		"predefinedEffects": "",
+		"source": {
+			"title": "ekiz"
+		},
+		"talentClass": "ancestry"
+	},
+	"type": "Talent"
+}
