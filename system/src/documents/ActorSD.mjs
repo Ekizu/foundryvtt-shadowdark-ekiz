@@ -1086,6 +1086,12 @@ export default class ActorSD extends Actor {
 				? strModifier
 				: 0;
 
+			// Organized's get to add their Int modifer (if positive)
+			const intModifier = this.abilityModifierWithoutWounds("int");
+			gearSlots += this.system.bonuses.organized && intModifier > 0
+				? intModifier
+				: 0;
+
 			// Add effects that modify gearslots
 			gearSlots += parseInt(this.system.bonuses.gearSlots, 10);
 		}

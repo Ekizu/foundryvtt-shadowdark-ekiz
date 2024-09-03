@@ -177,6 +177,7 @@
 			"damageMultiplier": 1,
 			"gearSlots": 0,
 			"hauler": false,
+			"organized": false,
 			"lightSource": "",
 			"meleeAttackBonus": 0,
 			"meleeDamageBonus": 0,
