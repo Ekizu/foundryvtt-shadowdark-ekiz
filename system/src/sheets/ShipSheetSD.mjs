@@ -330,7 +330,7 @@ export default class ShipSheetSD extends ActorSheetSD {
 	async _onRollHull(event) {
 		event.preventDefault();
 
-		const hull = this.actor.system.ac.value;
+		const hull = this.actor.system.attributes.ac.value;
 
 		const data = {
 			rollType: "hull",
