@@ -726,7 +726,7 @@ SHADOWDARK.sheet.ship.crew: Crew
 SHADOWDARK.sheet.ship.morale: Morale
 SHADOWDARK.sheet.ship.speed: Speed
 SHADOWDARK.sheet.ship.hull: Hull
-SHADOWDARK.sheet.ship.agility: Maneuverability
+SHADOWDARK.sheet.ship.agility: Agility
 SHADOWDARK.sheet.ship.skill: Crew skill
 
 SHADOWDARK.sheet.npc.specials_label: Ataques especiales

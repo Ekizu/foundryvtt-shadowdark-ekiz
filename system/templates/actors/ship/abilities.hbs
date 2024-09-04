@@ -6,21 +6,7 @@
 			{{> actors/ship/partials/speed }}
 
 			{{> actors/ship/partials/agility }}
-
-			<!-- Crew -->
-			{{#> ui/sd-box
-				header-label=(localize 'SHADOWDARK.sheet.ship.crew')
-				class="grid-colspan-2"
-				content-class="grid-1-columns"
-			}}
-				<input
-					name="system.crewNote"
-					type="text"
-					class="detail-value crew-note"
-					value="{{ system.crewNote }}"
-				/>
-			{{/ui/sd-box}}
-
+			{{> actors/ship/partials/crew }}
 			{{> actors/ship/partials/skill }}
 			{{> actors/ship/partials/morale }}
 
