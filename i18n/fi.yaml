@@ -688,15 +688,15 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Muut
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Vähennä käyttökertoja
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Lisää käyttökertoja
-
-SHADOWDARK.sheet.actor.morale: Morale
-
 SHADOWDARK.sheet.actor.ac: Puolustuspisteet
 SHADOWDARK.sheet.actor.alignment: Vakaumus
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: Osumapisteet
 SHADOWDARK.sheet.actor.level: Taso
 SHADOWDARK.sheet.actor.placeholder.name: Uusi nimi
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.class.item: Shadowdark esineikkuna
 SHADOWDARK.sheet.class.npc: Shadowdark NPC ikkuna
 SHADOWDARK.sheet.class.player: Shadowdark hahmoikkuna
@@ -721,6 +721,14 @@ SHADOWDARK.sheet.npc.description_label: Kuvaus
 SHADOWDARK.sheet.npc.features_label: Ominaisuudet
 SHADOWDARK.sheet.npc.movement_short: Liike
 SHADOWDARK.sheet.npc.movement: Liikkumisnopeus
+
+SHADOWDARK.sheet.ship.crew: Crew
+SHADOWDARK.sheet.ship.morale: Morale
+SHADOWDARK.sheet.ship.speed: Speed
+SHADOWDARK.sheet.ship.hull: Hull
+SHADOWDARK.sheet.ship.agility: Maneuverability
+SHADOWDARK.sheet.ship.skill: Crew skill
+
 SHADOWDARK.sheet.npc.specials_label: Erikoishyökkäykset
 SHADOWDARK.sheet.npc.tab.abilities: Kyvyt
 SHADOWDARK.sheet.npc.tab.description: Kuvaus

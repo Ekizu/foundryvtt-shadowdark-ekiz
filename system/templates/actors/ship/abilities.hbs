@@ -1,0 +1,35 @@
+<section class="tab tab-abilities" data-group="primary" data-tab="tab-abilities">
+	<div class="abilities-grid">
+		<div class="grid-2-columns">
+			{{> actors/ship/partials/hp }}
+			{{> actors/ship/partials/hull }}
+			{{> actors/ship/partials/speed }}
+
+			{{> actors/ship/partials/agility }}
+
+			<!-- Crew -->
+			{{#> ui/sd-box
+				header-label=(localize 'SHADOWDARK.sheet.ship.crew')
+				class="grid-colspan-2"
+				content-class="grid-1-columns"
+			}}
+				<input
+					name="system.crewNote"
+					type="text"
+					class="detail-value crew-note"
+					value="{{ system.crewNote }}"
+				/>
+			{{/ui/sd-box}}
+
+			{{> actors/ship/partials/skill }}
+			{{> actors/ship/partials/morale }}
+
+		</div>
+
+		<div class="grid-1-columns">
+			{{> actors/ship/abilities/attacks }}
+			{{> actors/ship/abilities/specials }}
+			{{> actors/ship/abilities/features}}
+		</div>
+	</div>
+</section>

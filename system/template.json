@@ -54,6 +54,12 @@
 			"morale": 7,
 			"move": "near",
 			"moveNote": "",
+
+			"crewNote": "4/12",
+			"shipSpeed": 5,
+			"shipAgility": 0,
+			"shipSkill": 0,
+
 			"spellcastingAbility": "",
 			"spellcastingBonus": 0,
 			"spellcastingAttackNum": 0,

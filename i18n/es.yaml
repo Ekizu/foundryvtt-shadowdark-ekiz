@@ -688,15 +688,15 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Misceláneo
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
-
-SHADOWDARK.sheet.actor.morale: Morale
-
 SHADOWDARK.sheet.actor.ac: CA
 SHADOWDARK.sheet.actor.alignment: Alineamiento
 SHADOWDARK.sheet.actor.hp_max: Máx
 SHADOWDARK.sheet.actor.hp: PV
 SHADOWDARK.sheet.actor.level: Nivel
 SHADOWDARK.sheet.actor.placeholder.name: Nuevo nombre de actor
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.class.item: Ficha de ítem de Shadowdark
 SHADOWDARK.sheet.class.npc: Ficha de NPC de Shadowdark
 SHADOWDARK.sheet.class.player: Ficha de jugador de Shadowdark
@@ -721,6 +721,14 @@ SHADOWDARK.sheet.npc.description_label: Descripción
 SHADOWDARK.sheet.npc.features_label: Características
 SHADOWDARK.sheet.npc.movement_short: Mov
 SHADOWDARK.sheet.npc.movement: Movimiento
+
+SHADOWDARK.sheet.ship.crew: Crew
+SHADOWDARK.sheet.ship.morale: Morale
+SHADOWDARK.sheet.ship.speed: Speed
+SHADOWDARK.sheet.ship.hull: Hull
+SHADOWDARK.sheet.ship.agility: Maneuverability
+SHADOWDARK.sheet.ship.skill: Crew skill
+
 SHADOWDARK.sheet.npc.specials_label: Ataques especiales
 SHADOWDARK.sheet.npc.tab.abilities: Habilidades
 SHADOWDARK.sheet.npc.tab.description: Descripción
