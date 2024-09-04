@@ -288,6 +288,9 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: Heitetty {hp} osumapistettä tasolle {
 SHADOWDARK.dialog.hp_roll.sum_total: Uusi maksimimäärä osumapisteille on nyt {total}
 SHADOWDARK.dialog.hp_roll.summary: Osumapisteiden heiton yhteenveto
 SHADOWDARK.dialog.hp_roll.title: Osumapisteheitto
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: Kykybonus
 SHADOWDARK.dialog.item_roll.item_bonus: Esinebonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Lahjakkuusbonus

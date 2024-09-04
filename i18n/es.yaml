@@ -288,6 +288,9 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: Obtienes {hp} PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.sum_total: Nuevos PV máximos {total}
 SHADOWDARK.dialog.hp_roll.summary: Sumario de tiradas de PV
 SHADOWDARK.dialog.hp_roll.title: Tirada de PV
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: Bonus de habilidad
 SHADOWDARK.dialog.item_roll.item_bonus: Bonus de ítem
 SHADOWDARK.dialog.item_roll.talent_bonus: Bonus de talento

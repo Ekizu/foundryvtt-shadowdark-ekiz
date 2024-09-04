@@ -288,6 +288,9 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: '{level} 레벨 HP {hp} 를 굴렸습�
 SHADOWDARK.dialog.hp_roll.sum_total: '{total} 만큼 최대 HP 증가'
 SHADOWDARK.dialog.hp_roll.summary: HP 굴림 요약
 SHADOWDARK.dialog.hp_roll.title: HP 굴림
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: 능력 보너스
 SHADOWDARK.dialog.item_roll.item_bonus: 아이템 보너스
 SHADOWDARK.dialog.item_roll.talent_bonus: 재능 보너스

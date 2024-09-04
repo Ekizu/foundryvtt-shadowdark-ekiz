@@ -57,6 +57,10 @@ export default class RollSD extends Roll {
 			return this._renderRoll(data, adv, options);
 		}
 
+		if (data.rollType === "hull") {
+			return this._renderRoll(data, adv, options);
+		}
+
 		// Roll damage for NPCs attack types
 		if (data.item.type === "NPC Attack" || data.item.type === "NPC Special Attack") {
 			if (data.item.type === "NPC Attack") {

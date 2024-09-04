@@ -288,6 +288,9 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: Rullade {hp} KP för nivå {level}
 SHADOWDARK.dialog.hp_roll.sum_total: För ett nytt max KP till {total} KP
 SHADOWDARK.dialog.hp_roll.summary: Summering för KP rullning
 SHADOWDARK.dialog.hp_roll.title: Rulla KP
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: Förmågebonus
 SHADOWDARK.dialog.item_roll.item_bonus: Föremålsbonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talangbonus
