@@ -59,7 +59,7 @@
 			"currentCrewNote": "4",
 			"shipSpeed": 6,
 			"shipAgility": 2,
-			"shipSkill": -1,
+			"skill": -1,
 			"spellcastingAbility": "",
 			"spellcastingBonus": 0,
 			"spellcastingAttackNum": 0,
