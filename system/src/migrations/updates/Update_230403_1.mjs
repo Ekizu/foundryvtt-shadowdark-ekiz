@@ -5,7 +5,7 @@ export default class Update_230403_1 extends UpdateBaseSD {
 	static version = 230403.1;
 
 	async updateActor(actorData) {
-		if (actorData.type === "NPC") return;
+		if (actorData.type === "NPC" || actorData.type === "Ship") return;
 
 		const updateData = {};
 

@@ -5,7 +5,7 @@ export default class Updated_230418_1 extends UpdateBaseSD {
 	static version = 230418.1;
 
 	async updateActor(actorData) {
-		if (actorData.type === "NPC") return;
+		if (actorData.type === "NPC" || actorData.type === "Ship") return;
 
 		const updateData = {};
 
@@ -133,7 +133,7 @@ export default class Updated_230418_1 extends UpdateBaseSD {
 				);
 			}
 		}
-		else if (actorData && actorData.type === "NPC") {
+		else if (actorData && (actorData.type === "NPC" || actorData.type === "Ship")) {
 			// For NPCs we can modify the attacks directly as they don't use effects
 			//
 			const updates = {

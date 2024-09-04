@@ -580,7 +580,7 @@ export default class RollSD extends Roll {
 			isWeapon: false,
 			isVersatile: false,
 			isRoll: true,
-			isNPC: data.actor?.type === "NPC",
+			isNPC: data.actor.type === "NPC" || data.actor.type === "Ship" ? true : false,
 			targetDC: options.target ?? false,
 		};
 		if (data.rolls.main) {

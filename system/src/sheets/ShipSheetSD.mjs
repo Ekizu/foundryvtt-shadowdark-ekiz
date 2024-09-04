@@ -5,7 +5,7 @@ export default class ShipSheetSD extends ActorSheetSD {
 	/** @inheritdoc */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["shadowdark", "sheet", "ship"],
+			classes: ["shadowdark", "sheet", "npc"],
 			scrollY: ["section.SD-content-body"],
 			width: 600,
 			height: 730,

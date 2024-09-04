@@ -5,7 +5,7 @@ export default class Updated_230419_1 extends UpdateBaseSD {
 	static version = 230419.1;
 
 	async updateActor(actorData) {
-		if (actorData.type === "NPC") {
+		if (actorData.type === "NPC" || actorData.type === "Ship") {
 			// Fix typo in config
 			if (actorData.system.move === "doulbeNear") return {"system.move": "doubleNear"};
 			return {};

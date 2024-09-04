@@ -1,7 +1,7 @@
 // Macro to get some information on random encounters
 const pack = game.packs.get("shadowdark.rollable-tables");
 
-if (!actor || (actor.type === "NPC")) {
+if (!actor || (actor.type === "NPC" || actor.type === "Ship")) {
 	ui.notifications.warn("Can't draw from reactions without a Player actor assigned/selected!");
 }
 
