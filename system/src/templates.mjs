@@ -24,7 +24,7 @@ export default function() {
 		"systems/shadowdark/templates/actors/ship/partials/speed.hbs",
 		"systems/shadowdark/templates/actors/ship/partials/hull.hbs",
 		"systems/shadowdark/templates/actors/ship/partials/skill.hbs",
-		"systems/shadowdark/templates/actors/nshippc/partials/hp.hbs",
+		"systems/shadowdark/templates/actors/ship/partials/hp.hbs",
 		"systems/shadowdark/templates/actors/ship/inventory.hbs",
 		"systems/shadowdark/templates/actors/ship/inventory/coins.hbs",
 		"systems/shadowdark/templates/actors/ship/inventory/slots.hbs",
