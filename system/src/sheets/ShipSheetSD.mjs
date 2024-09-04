@@ -339,6 +339,7 @@ export default class ShipSheetSD extends ActorSheetSD {
 
 		const parts = [`1d${hull}`];
 
+		let options={};
 		options.fastForward = true;
 		options.chatMessage = true;
 
