@@ -347,7 +347,7 @@ export default class ShipSheetSD extends ActorSheetSD {
 		options.flavor = options.title;
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
-		options.chatCardTemplate = "systems/shadowdark/templates/chat/roll-card.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/hull-roll-card.hbs";
 		options.rollMode = CONST.DICE_ROLL_MODES.PUBLIC;
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
