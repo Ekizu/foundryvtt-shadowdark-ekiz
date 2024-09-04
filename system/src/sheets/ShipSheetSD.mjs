@@ -80,6 +80,10 @@ export default class ShipSheetSD extends ActorSheetSD {
 			event => this._onRollHull(event)
 		);
 
+		html.find("[data-action='roll-crew']").click(
+			event => this._onRollCrew(event)
+		);
+
 		// Handle default listeners last so system listeners are triggered first
 		super.activateListeners(html);
 	}
@@ -348,6 +352,32 @@ export default class ShipSheetSD extends ActorSheetSD {
 		options.speaker = ChatMessage.getSpeaker({ actor: this });
 		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
 		options.chatCardTemplate = "systems/shadowdark/templates/chat/hull-roll-card.hbs";
+		options.rollMode = CONST.DICE_ROLL_MODES.PUBLIC;
+
+		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);
+	}
+
+	async _onRollCrew(event) {
+		event.preventDefault();
+
+		const crewSkill = this.actor.system.skill;
+
+		const data = {
+			rollType: "crew",
+			actor: this,
+		};
+
+		const parts = [`1d20+${crewSkill}`];
+
+		let options={};
+		options.fastForward = false;
+		options.chatMessage = true;
+
+		options.title = game.i18n.localize("SHADOWDARK.dialog.crew_skill_roll.title");
+		options.flavor = options.title;
+		options.speaker = ChatMessage.getSpeaker({ actor: this });
+		options.dialogTemplate = "systems/shadowdark/templates/dialog/roll-dialog.hbs";
+		options.chatCardTemplate = "systems/shadowdark/templates/chat/crew-skill-roll-card.hbs";
 		options.rollMode = CONST.DICE_ROLL_MODES.PUBLIC;
 
 		const result = await CONFIG.DiceSD.RollDialog(parts, data, options);

@@ -290,6 +290,7 @@ SHADOWDARK.dialog.hp_roll.summary: Summering för KP rullning
 SHADOWDARK.dialog.hp_roll.title: Rulla KP
 
 SHADOWDARK.dialog.hull_roll.title: Hull Roll
+SHADOWDARK.dialog.crew_skill_roll.title: Crew Skill Roll
 
 SHADOWDARK.dialog.item_roll.ability_bonus: Förmågebonus
 SHADOWDARK.dialog.item_roll.item_bonus: Föremålsbonus

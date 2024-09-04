@@ -57,7 +57,7 @@ export default class RollSD extends Roll {
 			return this._renderRoll(data, adv, options);
 		}
 
-		if (data.rollType === "hull") {
+		if (data.rollType === "hull" || data.rollType === "crew") {
 			return this._renderRoll(data, adv, options);
 		}
 

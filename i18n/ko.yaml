@@ -290,6 +290,7 @@ SHADOWDARK.dialog.hp_roll.summary: HP 굴림 요약
 SHADOWDARK.dialog.hp_roll.title: HP 굴림
 
 SHADOWDARK.dialog.hull_roll.title: Hull Roll
+SHADOWDARK.dialog.crew_skill_roll.title: Crew Skill Roll
 
 SHADOWDARK.dialog.item_roll.ability_bonus: 능력 보너스
 SHADOWDARK.dialog.item_roll.item_bonus: 아이템 보너스
