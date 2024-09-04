@@ -291,6 +291,7 @@ SHADOWDARK.dialog.hp_roll.title: Tirada de PV
 
 SHADOWDARK.dialog.hull_roll.title: Hull Roll
 SHADOWDARK.dialog.crew_skill_roll.title: Crew Skill Roll
+SHADOWDARK.dialog.ship_agility_roll.title: Ship Agility Roll
 
 SHADOWDARK.dialog.item_roll.ability_bonus: Bonus de habilidad
 SHADOWDARK.dialog.item_roll.item_bonus: Bonus de ítem
