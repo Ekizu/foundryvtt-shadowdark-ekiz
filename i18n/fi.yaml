@@ -387,7 +387,6 @@ SHADOWDARK.inventory.equipped_gear: Käytössä olevat varusteet
 SHADOWDARK.inventory.gear: Varusteet
 SHADOWDARK.inventory.gems: Jalokivet
 
-SHADOWDARK.inventory.gems: Gems
 SHADOWDARK.inventory.item.light_remaining: "{timeRemaining} minuuttia jäljellä"
 SHADOWDARK.inventory.item.light_seconds_remaining: Alle minuutti jäljellä
 SHADOWDARK.inventory.item.light_used: (käytetty)
