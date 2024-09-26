@@ -93,6 +93,12 @@ Hooks.once("init", () => {
 		label: "SHADOWDARK.sheet.class.npc",
 	});
 
+	Actors.registerSheet("shadowdark", sheets.ShipSheetSD, {
+		types: ["Ship"],
+		makeDefault: true,
+		label: "SHADOWDARK.sheet.class.npc",
+	});
+
 	Actors.registerSheet("shadowdark", sheets.LightSheetSD, {
 		types: ["Light"],
 		makeDefault: true,

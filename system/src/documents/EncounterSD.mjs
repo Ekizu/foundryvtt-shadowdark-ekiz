@@ -27,7 +27,7 @@ export default class EncounterSD extends Combat {
 			if (combatant.actor?.type === "Player") {
 				rollers.push(combatant);
 			}
-			else if (combatant.actor?.type === "NPC") {
+			else if (combatant.actor?.type === "NPC" || combatant.actor?.type === "Ship") {
 				npcs.push(combatant);
 			}
 			else {
@@ -56,14 +56,14 @@ export default class EncounterSD extends Combat {
 				await roll.evaluate();
 
 				// Construct chat message data
-				const name = combatant.actor.type === "NPC"
+				const name = combatant.actor.type === "NPC" || combatant.actor.type === "Ship"
 					? `${game.i18n.localize("SHADOWDARK.dialog.gm")}`
 					: combatant.name;
 
 				const flavor = game.i18n.format("COMBAT.RollsInitiative", {name});
 
 				let messageData = foundry.utils.mergeObject({
-					speaker: ((combatant.actor.type === "NPC")
+					speaker: ((combatant.actor.type === "NPC") || (combatant.actor.type === "Ship")
 						? null
 						: ChatMessage.getSpeaker({
 							actor: combatant.actor,
@@ -97,8 +97,8 @@ export default class EncounterSD extends Combat {
 				? prev : current;
 		}).combatant;
 
-		const firstIndex = (firstCombatant.actor.type === "NPC")
-			? rollers.findIndex(c => c?.actor.type === "NPC")
+		const firstIndex = (firstCombatant.actor.type === "NPC") || (firstCombatant.actor.type === "Ship")
+			? rollers.findIndex(c => (c?.actor.type === "NPC" || c?.actor.type === "Ship"))
 			: rollers.findIndex(c => c?.actor === firstCombatant.actor);
 
 		for (let i = 0; i < firstIndex; i++) {
@@ -136,7 +136,7 @@ export default class EncounterSD extends Combat {
 		// Post a reminder to the chat that clockwise initiative is active
 		let messageData = foundry.utils.mergeObject({
 			flavor: game.i18n.format("SHADOWDARK.chat.clockwise_initiative", {
-				name: ((firstCombatant.actor.type === "NPC")
+				name: ((firstCombatant.actor.type === "NPC") || (firstCombatant.actor.type === "Ship")
 					? `${game.i18n.localize("USER.RoleGamemaster")}`
 					: firstCombatant.name),
 			}),

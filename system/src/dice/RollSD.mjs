@@ -57,6 +57,10 @@ export default class RollSD extends Roll {
 			return this._renderRoll(data, adv, options);
 		}
 
+		if (data.rollType === "hull" || data.rollType === "crew" || data.rollType === "agility") {
+			return this._renderRoll(data, adv, options);
+		}
+
 		// Roll damage for NPCs attack types
 		if (data.item.type === "NPC Attack" || data.item.type === "NPC Special Attack") {
 			if (data.item.type === "NPC Attack") {
@@ -580,7 +584,7 @@ export default class RollSD extends Roll {
 			isWeapon: false,
 			isVersatile: false,
 			isRoll: true,
-			isNPC: data.actor?.type === "NPC",
+			isNPC: data.actor.type === "NPC" || data.actor.type === "Ship" ? true : false,
 			targetDC: options.target ?? false,
 		};
 		if (data.rolls.main) {

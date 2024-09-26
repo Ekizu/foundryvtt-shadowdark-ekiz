@@ -19,7 +19,7 @@ export default class Update_230910_2 extends UpdateBaseSD {
 
 		const updateData = {};
 
-		if (actorData && actorData.type === "NPC") {
+		if (actorData && (actorData.type === "NPC" || actorData.type === "Ship")) {
 			const updates = {
 				"system.attack.-=damage": null,
 			};

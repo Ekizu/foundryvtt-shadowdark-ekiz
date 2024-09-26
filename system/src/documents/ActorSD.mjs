@@ -1110,7 +1110,7 @@ export default class ActorSD extends Actor {
 				game.shadowdark.effectPanel.refresh();
 			}
 		}
-		else if (this.type === "NPC") {
+		else if (this.type === "NPC" || this.type === "Ship") {
 			this._prepareNPCData();
 		}
 	}
@@ -1300,7 +1300,7 @@ export default class ActorSD extends Actor {
 		if (this.type === "Player") {
 			this._playerRollHP(options);
 		}
-		else if (this.type === "NPC") {
+		else if (this.type === "NPC" || this.type === "Ship") {
 			this._npcRollHP(options);
 		}
 	}

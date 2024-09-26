@@ -304,6 +304,11 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: '{level} 레벨 HP {hp} 를 굴렸습�
 SHADOWDARK.dialog.hp_roll.sum_total: '{total} 만큼 최대 HP 증가'
 SHADOWDARK.dialog.hp_roll.summary: HP 굴림 요약
 SHADOWDARK.dialog.hp_roll.title: HP 굴림
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+SHADOWDARK.dialog.crew_skill_roll.title: Crew Skill Roll
+SHADOWDARK.dialog.ship_agility_roll.title: Ship Agility Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: 능력 보너스
 SHADOWDARK.dialog.item_roll.item_bonus: 아이템 보너스
 SHADOWDARK.dialog.item_roll.talent_bonus: 재능 보너스
@@ -704,15 +709,15 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Miscellaneous
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
-
-SHADOWDARK.sheet.actor.morale: Morale
-
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: 성향
 SHADOWDARK.sheet.actor.hp_max: 최대
 SHADOWDARK.sheet.actor.hp: HP
 SHADOWDARK.sheet.actor.level: 레벨
 SHADOWDARK.sheet.actor.placeholder.name: 새 액터 이름
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.class.item: 섀도다크 아이템 시트
 SHADOWDARK.sheet.class.npc: 섀도다크 NPC 시트
 SHADOWDARK.sheet.class.player: 섀도다크 플레이어 시트
@@ -737,6 +742,14 @@ SHADOWDARK.sheet.npc.description_label: 설명
 SHADOWDARK.sheet.npc.features_label: 재주
 SHADOWDARK.sheet.npc.movement_short: 이동
 SHADOWDARK.sheet.npc.movement: 이동
+
+SHADOWDARK.sheet.ship.crew: Crew
+SHADOWDARK.sheet.ship.morale: Morale
+SHADOWDARK.sheet.ship.speed: Speed
+SHADOWDARK.sheet.ship.hull: Hull
+SHADOWDARK.sheet.ship.agility: Agility
+SHADOWDARK.sheet.ship.skill: Crew skill
+
 SHADOWDARK.sheet.npc.specials_label: 특수 공격
 SHADOWDARK.sheet.npc.tab.abilities: 능력
 SHADOWDARK.sheet.npc.tab.description: 설명

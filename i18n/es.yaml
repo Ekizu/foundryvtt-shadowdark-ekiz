@@ -304,6 +304,11 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: Obtienes {hp} PV por nivel {level}
 SHADOWDARK.dialog.hp_roll.sum_total: Nuevos PV máximos {total}
 SHADOWDARK.dialog.hp_roll.summary: Sumario de tiradas de PV
 SHADOWDARK.dialog.hp_roll.title: Tirada de PV
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+SHADOWDARK.dialog.crew_skill_roll.title: Crew Skill Roll
+SHADOWDARK.dialog.ship_agility_roll.title: Ship Agility Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: Bonus de habilidad
 SHADOWDARK.dialog.item_roll.item_bonus: Bonus de ítem
 SHADOWDARK.dialog.item_roll.talent_bonus: Bonus de talento
@@ -704,15 +709,15 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Misceláneo
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Decrease Available Uses
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Increase Available Uses
-
-SHADOWDARK.sheet.actor.morale: Morale
-
 SHADOWDARK.sheet.actor.ac: CA
 SHADOWDARK.sheet.actor.alignment: Alineamiento
 SHADOWDARK.sheet.actor.hp_max: Máx
 SHADOWDARK.sheet.actor.hp: PV
 SHADOWDARK.sheet.actor.level: Nivel
 SHADOWDARK.sheet.actor.placeholder.name: Nuevo nombre de actor
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.class.item: Ficha de ítem de Shadowdark
 SHADOWDARK.sheet.class.npc: Ficha de NPC de Shadowdark
 SHADOWDARK.sheet.class.player: Ficha de jugador de Shadowdark
@@ -737,6 +742,14 @@ SHADOWDARK.sheet.npc.description_label: Descripción
 SHADOWDARK.sheet.npc.features_label: Características
 SHADOWDARK.sheet.npc.movement_short: Mov
 SHADOWDARK.sheet.npc.movement: Movimiento
+
+SHADOWDARK.sheet.ship.crew: Crew
+SHADOWDARK.sheet.ship.morale: Morale
+SHADOWDARK.sheet.ship.speed: Speed
+SHADOWDARK.sheet.ship.hull: Hull
+SHADOWDARK.sheet.ship.agility: Agility
+SHADOWDARK.sheet.ship.skill: Crew skill
+
 SHADOWDARK.sheet.npc.specials_label: Ataques especiales
 SHADOWDARK.sheet.npc.tab.abilities: Habilidades
 SHADOWDARK.sheet.npc.tab.description: Descripción

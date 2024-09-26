@@ -19,7 +19,7 @@ export default class Update_230910_1 extends UpdateBaseSD {
 
 		const updateData = {};
 
-		if (actorData && actorData.type === "NPC") {
+		if (actorData && (actorData.type === "NPC" || actorData.type === "Ship")) {
 			const attackBonus = item?.system?.attack?.bonus ?? null;
 			const damageBonus = item?.system?.damage?.bonus ?? null;
 

@@ -304,6 +304,11 @@ SHADOWDARK.dialog.hp_roll.roll_per_level: Rullade {hp} KP för nivå {level}
 SHADOWDARK.dialog.hp_roll.sum_total: För ett nytt max KP till {total} KP
 SHADOWDARK.dialog.hp_roll.summary: Summering för KP rullning
 SHADOWDARK.dialog.hp_roll.title: Rulla KP
+
+SHADOWDARK.dialog.hull_roll.title: Hull Roll
+SHADOWDARK.dialog.crew_skill_roll.title: Crew Skill Roll
+SHADOWDARK.dialog.ship_agility_roll.title: Ship Agility Roll
+
 SHADOWDARK.dialog.item_roll.ability_bonus: Förmågebonus
 SHADOWDARK.dialog.item_roll.item_bonus: Föremålsbonus
 SHADOWDARK.dialog.item_roll.talent_bonus: Talangbonus
@@ -704,15 +709,15 @@ SHADOWDARK.sheet.abilities.stats: Stats
 SHADOWDARK.sheet.abilities.ungrouped.label: Diverse
 SHADOWDARK.sheet.abilities.uses.decrement.tooltip: Minska tillgängliga användningar
 SHADOWDARK.sheet.abilities.uses.increment.tooltip: Öka tillgängliga användningar
-
-SHADOWDARK.sheet.actor.morale: Morale
-
 SHADOWDARK.sheet.actor.ac: AC
 SHADOWDARK.sheet.actor.alignment: Moralisk Lutning
 SHADOWDARK.sheet.actor.hp_max: Max
 SHADOWDARK.sheet.actor.hp: KP
 SHADOWDARK.sheet.actor.level: Nivå
 SHADOWDARK.sheet.actor.placeholder.name: Nytt aktörsnamn
+
+SHADOWDARK.sheet.actor.morale: Morale
+
 SHADOWDARK.sheet.class.item: Shadowdark Föremålsblad
 SHADOWDARK.sheet.class.npc: Shadowdark NPC Ark
 SHADOWDARK.sheet.class.player: Shadowdark Spelarblad
@@ -737,6 +742,14 @@ SHADOWDARK.sheet.npc.description_label: Beskrivning
 SHADOWDARK.sheet.npc.features_label: Funktioner
 SHADOWDARK.sheet.npc.movement_short: Flytta
 SHADOWDARK.sheet.npc.movement: Förflyttning
+
+SHADOWDARK.sheet.ship.crew: Crew
+SHADOWDARK.sheet.ship.morale: Morale
+SHADOWDARK.sheet.ship.speed: Speed
+SHADOWDARK.sheet.ship.hull: Hull
+SHADOWDARK.sheet.ship.agility: Agility
+SHADOWDARK.sheet.ship.skill: Crew skill
+
 SHADOWDARK.sheet.npc.specials_label: Speciella Attacker
 SHADOWDARK.sheet.npc.tab.abilities: Förmågor
 SHADOWDARK.sheet.npc.tab.description: Beskrivning
