@@ -26,6 +26,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			choice: [],
 			selection: [],
 		};
+		this.formData.classDesc = "";
 		this.formData.classTalents = {
 			fixed: [],
 			choice: [],
@@ -101,6 +102,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 					sp: 0,
 					cp: 0,
 				},
+				showLevelUp: true,
 			},
 		};
 
@@ -295,12 +297,6 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return this.formData;
 	}
 
-	diceSound() {
-		const sounds = [CONFIG.sounds.dice];
-		const src = sounds[0];
-		game.audio.play(src, {volume: 1});
-	}
-
 	async _randomizeHandler(event) {
 		const eventStr = event.target.name;
 		let tempInt = 0;
@@ -407,7 +403,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			await this._randomizeGear();
 		}
 
-		this.diceSound();
+		shadowdark.utils.diceSound();
 
 		// update all changes
 		this.render();
@@ -425,7 +421,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (classObj.system.talents) {
 			for (const talent of classObj.system.talents) {
 				let talentObj = await fromUuid(talent);
-				let fDesc = this._formatDescription(talentObj.system.description);
+				let fDesc = await this._formatDescription(talentObj.system.description);
 				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
@@ -441,7 +437,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		if (classObj.system.talentChoices) {
 			for (const talent of classObj.system.talentChoices) {
 				let talentObj = await fromUuid(talent);
-				let fDesc = this._formatDescription(talentObj.system.description);
+				let fDesc = await this._formatDescription(talentObj.system.description);
 				talentObj.formattedDescription = fDesc;
 				talentData.push(talentObj);
 			}
@@ -492,6 +488,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		this.formData.weapons = weaponData;
 
 		this.class = classObj;
+		this.formData.classDesc = await this._formatDescription(classObj.system.description);
 		await this._loadLanguages(randomize);
 
 	}
@@ -510,7 +507,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			if (ancestryObj.system.talents) {
 				for (const talent of ancestryObj.system.talents) {
 					let talentObj = await fromUuid(talent);
-					let fDesc = this._formatDescription(talentObj.system.description);
+					let fDesc = await this._formatDescription(talentObj.system.description);
 					talentObj.formattedDescription = fDesc;
 					talentData.push(talentObj);
 				}
@@ -735,9 +732,9 @@ export default class CharacterGeneratorSD extends FormApplication {
 		return value.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 	}
 
-	_formatDescription(text) {
+	async _formatDescription(text) {
 
-		const description = TextEditor.enrichHTML(
+		const description = await TextEditor.enrichHTML(
 			jQuery(text.replace(/<p><\/p>/g, " ")).text(),
 			{
 				async: false,
@@ -790,6 +787,14 @@ export default class CharacterGeneratorSD extends FormApplication {
 
 		await newActor.createEmbeddedDocuments("Item", characterItems);
 
+		let maxHP = newActor.system.attributes.hp.base + newActor.system.attributes.hp.bonus;
+		let newHP = maxHP;
+
+		await newActor.update({
+			"system.attributes.hp.max": maxHP,
+			"system.attributes.hp.value": newHP,
+		});
+
 		if (userId !== game.userId) {
 			const ownership = newActor.ownership;
 			ownership[userId] = CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
@@ -810,12 +815,8 @@ export default class CharacterGeneratorSD extends FormApplication {
 			});
 		}
 		else {
-			if (level0) {
-				newActor.sheet.render(true);
-			}
-			else {
-				new shadowdark.apps.LevelUpSD(newActor.id).render(true);
-			}
+
+			newActor.sheet.render(true);
 
 			return ui.notifications.info(
 				game.i18n.localize("SHADOWDARK.apps.character-generator.success"),
@@ -825,6 +826,12 @@ export default class CharacterGeneratorSD extends FormApplication {
 	}
 
 	async _createCharacter() {
+
+		// sets initial totals on all stats
+		for (const key of CONFIG.SHADOWDARK.ABILITY_KEYS) {
+			this.formData.actor.system.abilities[key].total =
+				this.formData.actor.system.abilities[key].base;
+		}
 
 		const allItems = [];
 
@@ -836,6 +843,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 			...this.formData.classTalents.selection,
 		];
 
+		// load talents with selection of options
 		for (const talentItem of allTalents) {
 			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
 		}
@@ -849,6 +857,7 @@ export default class CharacterGeneratorSD extends FormApplication {
 		// make changes only for level 0 characters
 		if (this.formData.level0) {
 			this.formData.actor.system.coins.gp = 0;
+			this.formData.actor.system.showLevelUp = false;
 
 			// add gear to the items list
 			for (const item of this.formData.gearSelected) {
@@ -915,17 +924,26 @@ export default class CharacterGeneratorSD extends FormApplication {
 				class: this.formData.actor.system.class,
 				languages: this.formData.actor.system.languages,
 				coins: {gp: this.formData.actor.system.coins.gp},
+				showLevelUp: true,
 			} });
 
-		// add class talents
-		const allItems = [
+
+		// Add class talents and promp player to choose effects
+		const allTalents = [
 			...this.formData.classTalents.fixed,
 			...this.formData.classTalents.selection,
 		];
+
+		// load talents with selection of options
+		const allItems = [];
+		for (const talentItem of allTalents) {
+			allItems.push(await shadowdark.utils.createItemWithEffect(talentItem));
+		}
+
 		await actorRef.createEmbeddedDocuments("Item", allItems);
 
-		// go to level up screen
-		new shadowdark.apps.LevelUpSD(this.actorUid).render(true);
+		// open actor sheet
+		actorRef.sheet.render(true);
 		this.close();
 	}
 }

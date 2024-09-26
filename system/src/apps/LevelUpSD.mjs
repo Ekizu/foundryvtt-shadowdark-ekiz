@@ -34,7 +34,7 @@ export default class LevelUpSD extends FormApplication {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["shadowdark", "level-up"],
-			width: 275,
+			width: 300,
 			resizable: false,
 			closeOnSubmit: true,
 			submitOnChange: false,
@@ -104,9 +104,15 @@ export default class LevelUpSD extends FormApplication {
 			this.data.targetLevel =  this.data.currentLevel +1;
 			this.data.talentGained = (this.data.targetLevel % 2 !== 0);
 			this.data.isSpellCaster = (this.data.class.system.spellcasting.class !== "__not_spellcaster__");
+
 			if (this.data.isSpellCaster) {
+				this.data.spellcastingClass =
+					this.data.class.system.spellcasting.class === ""
+						? this.data.actor.system.class
+						: this.data.class.system.spellcasting.class;
+
 				this.spellbook = new shadowdark.apps.SpellBookSD(
-					this.data.class.uuid,
+					this.data.spellcastingClass,
 					this.data.actor.id
 				);
 
@@ -167,8 +173,6 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	async _onRollHP() {
-
-		// roll HP
 		const data = {
 			rollType: "hp",
 			actor: this.data.actor,
@@ -287,7 +291,6 @@ export default class LevelUpSD extends FormApplication {
 	}
 
 	async _finalizeLevelUp() {
-
 		// update actor XP and level
 		let newXP = 0;
 
@@ -296,22 +299,7 @@ export default class LevelUpSD extends FormApplication {
 			newXP = this.data.actor.system.level.xp - (this.data.actor.system.level.value * 10);
 		}
 
-		// calculate new HP base
-		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
-		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
-
-		if (this.data.targetLevel === 1) {
-			let hpConMod = this.data.actor.system.abilities.con.mod;
-			// apply conmod to a set minimum 1 HP
-			if ((this.data.rolls.hp + hpConMod) > 1) {
-				newBaseHP = this.data.rolls.hp + hpConMod;
-			}
-			else {
-				newBaseHP = 1;
-			}
-			newValueHP = newBaseHP;
-		}
-
+		// Add items first as they may include HP / Con bonuses
 		let allItems = [
 			...this.data.talents,
 		];
@@ -324,12 +312,36 @@ export default class LevelUpSD extends FormApplication {
 			];
 		}
 
+		// Names for audit log
+		const itemNames = [];
+		allItems.forEach(x => itemNames.push(x.name));
+
+		// add talents and spells to actor
+		await this.data.actor.createEmbeddedDocuments("Item", allItems);
+
+		// calculate new HP base
+		let newBaseHP = this.data.actor.system.attributes.hp.base + this.data.rolls.hp;
+		let newValueHP = this.data.actor.system.attributes.hp.value + this.data.rolls.hp;
+		let newMaxHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
+
+		if (this.data.targetLevel === 1) {
+			let hpConMod = this.data.actor.system.abilities.con.mod;
+			// apply conmod to a set minimum 1 HP
+			if ((this.data.rolls.hp + hpConMod) > 1) {
+				newBaseHP = this.data.rolls.hp + hpConMod;
+
+			}
+			else {
+				newBaseHP = 1;
+			}
+			newValueHP = newBaseHP + this.data.actor.system.attributes.hp.bonus;
+			newMaxHP = newValueHP;
+		}
+
 		// load audit log, check for valid data, add new entry
 		let auditLog = this.data.actor.system?.auditlog ?? {};
 		if (auditLog.constructor !== Object) auditLog = {};
 
-		const itemNames = [];
-		allItems.forEach(x => itemNames.push(x.name));
 		auditLog[this.data.targetLevel] = {
 			baseHP: newBaseHP,
 			itemsGained: itemNames,
@@ -337,28 +349,14 @@ export default class LevelUpSD extends FormApplication {
 
 		// update values on actor
 		await this.data.actor.update({
-			"system.level.value": this.data.targetLevel,
-			"system.level.xp": newXP,
 			"system.attributes.hp.base": newBaseHP,
+			"system.attributes.hp.max": newMaxHP,
 			"system.attributes.hp.value": newValueHP,
 			"system.auditLog": auditLog,
+			"system.level.value": this.data.targetLevel,
+			"system.level.xp": newXP,
 		});
 
-		// add talents and spells to actor
-		await this.data.actor.createEmbeddedDocuments("Item", allItems);
-
-		// show actor sheet
 		this.close();
-	}
-
-	/** @override */
-	async close() {
-		try {
-			this.data.actor.sheet.render(true);
-		 }
-		catch(err) {
-			console.log("Counld't open Actor");
-		}
-		super.close();
 	}
 }
