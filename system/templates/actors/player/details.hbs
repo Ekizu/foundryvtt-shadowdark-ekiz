@@ -12,7 +12,12 @@
 			</div>
 			<div class="content centered">
 				{{#unless levelUp}}
-					{{system.level.value}}
+					{{numberInput
+						system.level.value
+						name="system.level.value"
+						class="ability-score"
+						placeholder="0"
+					}}
 				{{/unless}}
 				{{#if levelUp}}
 					<a class="fa-solid fa-arrow-up fa-beat" data-action="level-up"></a>
